@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'girls/index'
+
+  get 'girls/show'
+
   get 'hours/index'
 
   get 'shops/show'
