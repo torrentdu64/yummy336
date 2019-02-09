@@ -1,8 +1,8 @@
 class ShopsController < ApplicationController
 
-  skip_before_action :authenticate_user!, only: [:show]
+  skip_before_action :authenticate_user!, only: [ :show ]
 
-   before_action :find_pincky, only: [ :show ]
+   before_action :find_pinky, only: [ :show ]
 
   def show
 
@@ -10,8 +10,9 @@ class ShopsController < ApplicationController
 
   private
 
-  def find_pincky
-    @shop =  Shop.find(1)
+  def find_pinky
+    # slug name for the shop
+    #@shop =  Shop.find_by_title()
   end
 
 end
