@@ -8,10 +8,19 @@
   </div>
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
+      <div class="card"
+          style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+                 url('<%= cl_image_path 'https://res.cloudinary.com/pinky-girls/image/upload/v1549750983/samples/food/spices.jpg', height: 300, width: 400, crop: :fit %>')">
+          <div class="card-category">Popular</div>
+          <div class="card-description">
+            <h2>Some stuff</h2>
+            <p>Very cool stuff, useful and smart</p>
+          </div>
+          <a class="card-link" href="#" ></a>
+        </div>
 
       <p class="text-center">
-        <%= cl_image_tag("samples/food/spices",
-      width: 400, height: 300, crop: :fill) %>
+
             <%= @shop.description %>
         </p>
         <%= link_to "index girls", girls_index_path %>
