@@ -10,10 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190207205102) do
+ActiveRecord::Schema.define(version: 20190208235206) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "advertises", force: :cascade do |t|
+    t.string "title"
+    t.string "web_url"
+    t.bigint "girl_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["girl_id"], name: "index_advertises_on_girl_id"
+  end
+
+  create_table "girls", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "age"
+    t.bigint "shop_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shop_id"], name: "index_girls_on_shop_id"
+  end
+
+  create_table "hours", force: :cascade do |t|
+    t.string "day"
+    t.time "open_hour"
+    t.time "close_hour"
+    t.date "date"
+    t.bigint "shop_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shop_id"], name: "index_hours_on_shop_id"
+  end
+
+  create_table "shops", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "address"
+    t.string "phone"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_shops_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +68,8 @@ ActiveRecord::Schema.define(version: 20190207205102) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "advertises", "girls"
+  add_foreign_key "girls", "shops"
+  add_foreign_key "hours", "shops"
+  add_foreign_key "shops", "users"
 end
