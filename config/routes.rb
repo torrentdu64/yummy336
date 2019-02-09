@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'advertises/index'
+
   get 'girls/index'
 
   get 'girls/show'

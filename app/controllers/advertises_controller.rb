@@ -1,4 +1,4 @@
-class HoursController < ApplicationController
+class AdvertisesController < ApplicationController
 
   skip_before_action :authenticate_user!, only: [:index]
 
