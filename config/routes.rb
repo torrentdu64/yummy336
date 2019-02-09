@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'hours/index'
+
   get 'shops/show'
 
   devise_for :users
