@@ -12,7 +12,9 @@
 
 /* Logo */
 .navbar-wagon-brand img {
-  height: 50px;
+  height: 90px;
+  position: fixed;
+  z-index: 4;
 }
 
 /* User Avatar */
