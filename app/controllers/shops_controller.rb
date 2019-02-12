@@ -10,8 +10,10 @@ class ShopsController < ApplicationController
     @markers = @shops.map do |shop|
       {
         lng: shop.longitude,
-        lat: shop.latitude
+        lat: shop.latitude,
+        infoWindow: render_to_string(partial: "/shops/map_info", locals: { shop: shop })
       }
+    end
   end
 
   private
