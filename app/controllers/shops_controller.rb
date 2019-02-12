@@ -5,6 +5,13 @@ class ShopsController < ApplicationController
    before_action :find_pinky, only: [ :show ]
 
   def show
+    @shops = Shop.where.not(latitude: nil, longitude: nil)
+
+    @markers = @shops.map do |shop|
+      {
+        lng: shop.longitude,
+        lat: shop.latitude
+      }
   end
 
   private

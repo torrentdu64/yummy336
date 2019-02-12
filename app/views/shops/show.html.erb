@@ -133,7 +133,13 @@
                     <div class="col-md-4 col-sm-4">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
 
-                              <%= image_tag "team-image1", class: "img-responsive" %>
+                              <% image_tag "team-image1", class: "img-responsive" %>
+                              <div   id="map"
+                                      style="width: 100%;
+                                      height: 600px;"
+                                      data-markers="<%= @markers.to_json %>"
+                                      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+                                    ></div>
                                    <div class="team-hover">
                                         <div class="team-item">
                                              <h4>Duis vel lacus id magna mattis vehicula</h4>
@@ -143,6 +149,7 @@
                                              </ul>
                                         </div>
                                    </div>
+
                          </div>
                          <div class="team-info">
                               <h3>New Catherine</h3>
