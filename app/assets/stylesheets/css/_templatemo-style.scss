@@ -286,10 +286,12 @@ http://www.templatemo.com/tm-515-eatery
   .custom-navbar .navbar-toggle {
     border: none;
     padding-top: 10px;
+
   }
 
   .custom-navbar .navbar-toggle {
     background-color: transparent;
+
   }
 
   .custom-navbar .navbar-toggle .icon-bar {
@@ -309,6 +311,7 @@ http://www.templatemo.com/tm-515-eatery
       -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
       box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
       padding: 12px 0;
+      margin-right: -20px;
     }
 
     .top-nav-collapse .navbar-brand {
@@ -334,6 +337,15 @@ http://www.templatemo.com/tm-515-eatery
     padding: 0;
   }
 
+  .wave{
+    background: url(/assets/wave.png) center no-repeat;
+    /* width: 100vh; */
+    min-height: 350px;
+    height: auto;
+    background-size: 220vh 120vh;
+    background-position: -49px -300px;
+    }
+
   #home h1 {
     color: #ffffff;
     padding-bottom: 30px;
@@ -349,6 +361,7 @@ http://www.templatemo.com/tm-515-eatery
   }
 
   @media (min-width: 768px) {
+
     .slider .col-md-8 {
       padding-left: 0;
     }
@@ -433,6 +446,8 @@ http://www.templatemo.com/tm-515-eatery
     border-color: transparent;
     color: #ffffff;
   }
+
+
 
 
 
@@ -781,7 +796,7 @@ http://www.templatemo.com/tm-515-eatery
 
   .footer-open-hour {
     background: #ce3232;
-    background: url('/assets/footer-open-hour-bg.jpg') center center no-repeat;
+    background: url('/assets/hours.jpg') center center no-repeat;
     background-size: cover;
     border-radius: 20px;
     margin-top: 0;
@@ -794,7 +809,7 @@ http://www.templatemo.com/tm-515-eatery
   }
 
   .footer-open-hour::after {
-    background: rgba(29,29,29,0.85);
+    background: rgba(183, 41, 130, 0.58);
     content: "";
     position: absolute;
     top: 0;
@@ -1002,6 +1017,12 @@ http://www.templatemo.com/tm-515-eatery
 
     .menu-thumb .menu-info {
       top: 60%;
+    }
+    video{
+      width: 380px;
+    }
+    .home-video {
+      top: 70px;
     }
   }
 
