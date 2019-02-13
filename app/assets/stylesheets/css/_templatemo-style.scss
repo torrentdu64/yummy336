@@ -338,7 +338,7 @@ http://www.templatemo.com/tm-515-eatery
   }
 
   .wave{
-    background: image-url('/assets/wave.png') center no-repeat;
+    background: image-url('wave.png') center no-repeat;
     /* width: 100vh; */
     min-height: 350px;
     height: auto;
@@ -416,15 +416,15 @@ http://www.templatemo.com/tm-515-eatery
   }
 
   .slider .item-first {
-    background-image: image-url("/assets/slider-image1.jpg");
+    background-image: image-url("slider-image1.jpg");
   }
 
   .slider .item-second {
-    background-image: image-url("/assets/slider-image2.jpg");
+    background-image: image-url("slider-image2.jpg");
   }
 
   .slider .item-third {
-    background-image: image-url("/assets/slider-image3.jpg");
+    background-image: image-url("slider-image3.jpg");
   }
 
   .slider .item-second .section-btn {
@@ -658,7 +658,7 @@ http://www.templatemo.com/tm-515-eatery
   -----------------------------------------*/
 
   #testimonial {
-    background: image-url('/assets/testimonial-bg.jpg') center center no-repeat;
+    background: image-url('testimonial-bg.jpg') center center no-repeat;
     background-size: cover;
   }
 
@@ -797,7 +797,7 @@ http://www.templatemo.com/tm-515-eatery
 
   .footer-open-hour {
     background: #ce3232;
-    background: image-url('/assets/hours.jpg') center center no-repeat;
+    background: image-url('hours.jpg') center center no-repeat;
     background-size: cover;
     border-radius: 20px;
     margin-top: 0;
