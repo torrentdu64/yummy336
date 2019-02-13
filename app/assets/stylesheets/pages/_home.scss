@@ -6,7 +6,16 @@
 
 }
 
+
+
 .hours{
   margin-left: 60%;
   margin-top: -7%;
+}
+
+@media only screen and (max-width: 580px) {
+  .hours{
+    top: 0px;
+    right: 266px;
+  }
 }
