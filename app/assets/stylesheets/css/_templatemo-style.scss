@@ -335,6 +335,10 @@ http://www.templatemo.com/tm-515-eatery
       HOME
   -----------------------------------------*/
 
+  .mobile-video{
+    display: none;
+  }
+
   #home {
     padding: 0;
   }
@@ -476,8 +480,11 @@ http://www.templatemo.com/tm-515-eatery
     position: absolute;
   }
   @media only screen and (max-width: 580px) {
-    .wave{
-
+    .web-video{
+      display: none;
+    }
+    .mobile-video{
+      display: block;
     }
     .heart-map{
       width: 346px !important;
