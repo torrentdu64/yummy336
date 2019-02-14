@@ -546,6 +546,14 @@ http://www.templatemo.com/tm-515-eatery
     //  background-repeat: space;
     // background-size: 20px auto;
   }
+  @media only screen and (max-width: 580px) {
+     #team {
+      width: 475px;
+     }
+
+  }
+
+
 
   .team-thumb {
     position: relative;
