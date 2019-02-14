@@ -4,7 +4,7 @@
 
     // PRE LOADER
     $(window).load(function(){
-      $('.preloader').fadeOut(1000); // set duration in brackets    
+      $('.preloader').fadeOut(1000); // set duration in brackets
     });
 
 
@@ -36,7 +36,7 @@
     // PARALLAX EFFECT
     $.stellar({
       horizontalScrolling: false,
-    }); 
+    });
 
 
     // MAGNIFIC POPUP
@@ -62,7 +62,7 @@
         return openerElement.is('img') ? openerElement : openerElement.find('img');
         }
       }
-    });  
+    });
 
 /*
     // CONTACT FORM
@@ -108,7 +108,7 @@
           }, 1000);
             event.preventDefault();
       });
-    });  
+    });
 
 
     // WOW ANIMATION
