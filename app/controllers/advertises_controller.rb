@@ -6,7 +6,6 @@ class AdvertisesController < ApplicationController
   end
 
 
-
 end
 
 
