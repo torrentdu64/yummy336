@@ -2,7 +2,7 @@
 
 .home-video{
   position: relative;
-  left: 15px;
+  left: 0px;
 
 }
 
@@ -16,6 +16,7 @@
 @media only screen and (max-width: 580px) {
   .hours{
     top: 0px;
-    right: 266px;
+    right: -40px;
   }
+
 }
