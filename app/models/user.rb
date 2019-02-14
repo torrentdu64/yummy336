@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :shops
+
+  def name
+    "#{id} - #{email}"
+  end
 end

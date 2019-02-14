@@ -1,4 +1,4 @@
 //= require rails-ujs
-//= require_traa ./app
+//= require_tree ./app
 
 
