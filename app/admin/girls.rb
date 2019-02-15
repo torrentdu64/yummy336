@@ -23,5 +23,18 @@ index do
       end
       actions
   end
+  show do
+
+    attributes_table do
+
+      row "Index" do link_to " <==  back", admin_girls_path end
+      row :name
+      row :photo_one do |photo|
+        image_tag photo.photo_one_url , size: "200x300"
+      end
+    end
+
+  end
+
 
 end
