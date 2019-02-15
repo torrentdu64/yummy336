@@ -1,5 +1,194 @@
-<h1>Girls#show</h1>
-<p>Find me in app/views/girls/show.html.erb</p>
+<section id="home" class="slider" data-stellar-background-ratio="0.5">
+  <div class="owl-carousel owl-theme">
+     <div class="item " style="background-image:url(<%= cl_image_path @girl.photo_one, :rop=>'fill' %>);">
+          <div class="caption">
+               <div class="container">
+                    <div class="col-md-8 col-sm-12">
+                         <h3>Eatery Cafe &amp; Restaurant</h3>
+                         <h1>Our mission is to provide an unforgettable experience</h1>
+                         <a href="#team" class="section-btn btn btn-default smoothScroll">Meet our chef</a>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <div class="item " style="background-image:url(<%= cl_image_path @girl.photo_two ,gravity: :face%>);">
+          <div class="caption">
+               <div class="container">
+                    <div class="col-md-8 col-sm-12">
+                         <h3>Your Perfect Breakfast</h3>
+                         <h1>The best dinning quality can be here too!</h1>
+                         <a href="#menu" class="section-btn btn btn-default smoothScroll">Discover menu</a>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <div class="item " style="background-image:url(<%= cl_image_path @girl.photo_three, gravity: :face %>);">
+          <div class="caption">
+               <div class="container">
+                    <div class="col-md-8 col-sm-12">
+                         <h3>New Restaurant in Town</h3>
+                         <h1>Enjoy our special menus every Sunday and Friday</h1>
+                         <a href="#contact" class="section-btn btn btn-default smoothScroll">Reservation</a>
+                    </div>
+               </div>
+          </div>
+     </div>
+  </div>
+</section>
+<section id="menu" data-stellar-background-ratio="0.5">
+          <div class="main-container">
+               <div class="row">
 
 
-<%= render "advertises/index" %>
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                              <h2>Our Girls</h2>
+                              <h4>Sweet &amp; Lovely</h4>
+                         </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-5 col-sm-4" id="profile">
+                      <p><%= @girl.description %></p>
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- MENU THUMB -->
+                         <div class="menu-thumb">
+
+                              <a href=<%= image_path('menu-image1.jpg') %> class="image-popup" title="American Breakfast">
+
+
+
+                                   <%= image_tag "menu-image1.jpg", class: "img-responsive" %>
+
+                                   <div class="menu-info">
+                                        <div class="menu-item">
+                                             <h3>American Breakfast</h3>
+                                             <p>Tomato / Eggs / Sausage</p>
+                                        </div>
+                                        <div class="menu-price">
+                                             <span>$25</span>
+                                        </div>
+                                   </div>
+
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- MENU THUMB -->
+                         <div class="menu-thumb">
+                              <a href=<%= image_path('menu-image2.jpg') %> class="image-popup" title="Self-made Salad">
+
+                                   <%= image_tag "menu-image2.jpg", class: "img-responsive" %>
+
+
+                                   <div class="menu-info">
+                                        <div class="menu-item">
+                                             <h3>Self-made Salad</h3>
+                                             <p>Green / Fruits / Healthy</p>
+                                        </div>
+                                        <div class="menu-price">
+                                             <span>$18</span>
+                                        </div>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- MENU THUMB -->
+                         <div class="menu-thumb">
+                              <a href=<%= image_path('menu-image3.jpg') %> class="image-popup" title="Chinese Noodle">
+
+
+                                   <%= image_tag "menu-image3.jpg", class: "img-responsive" %>
+
+                                   <div class="menu-info">
+                                        <div class="menu-item">
+                                             <h3>Chinese Noodle</h3>
+                                             <p>Pepper / Chicken / Vegetables</p>
+                                        </div>
+                                        <div class="menu-price">
+                                             <span>$34</span>
+                                        </div>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- MENU THUMB -->
+                         <div class="menu-thumb">
+                              <a href=<%= image_path('menu-image4.jpg') %> class="image-popup" title="Rice Soup">
+
+                                    <%= image_tag "menu-image4.jpg", class: "img-responsive" %>
+
+                                   <div class="menu-info">
+                                        <div class="menu-item">
+                                             <h3>Rice Soup</h3>
+                                             <p>Green / Chicken</p>
+                                        </div>
+                                        <div class="menu-price">
+                                             <span>$28</span>
+                                        </div>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- MENU THUMB -->
+                         <div class="menu-thumb">
+                              <a href=<%= image_path('menu-image5.jpg') %> class="image-popup" title="Project title">
+
+                                   <%= image_tag "menu-image5.jpg", class: "img-responsive" %>
+
+                                   <div class="menu-info">
+                                        <div class="menu-item">
+                                             <h3>Deli Burger</h3>
+                                             <p>Beef / Fried Potatoes</p>
+                                        </div>
+                                        <div class="menu-price">
+                                             <span>$46</span>
+                                        </div>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- MENU THUMB -->
+                         <div class="menu-thumb">
+                              <a href=<%= image_path('menu-image6.jpg') %> class="image-popup" title="Project title">
+                                   <%= image_tag "menu-image6.jpg", class: "img-responsive" %>
+                                   <div class="menu-info">
+                                        <div class="menu-item">
+                                             <h3>Big Flat Fried</h3>
+                                             <p>Pepper / Crispy</p>
+                                        </div>
+                                        <div class="menu-price">
+                                             <span>$30</span>
+                                        </div>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+                    <%= render "advertises/index" %>
+
+
+               </div>
+          </div>
+     </section>
+
+

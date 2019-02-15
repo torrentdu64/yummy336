@@ -1,14 +1,16 @@
-
+<div class="space-nav"></div>
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <h1 class="text-center">Divine Girls</h1>
+        <p class="text-center">Choose you Candy</p>
     </div>
   </div>
-  <% @girls.each  do |girl| %>
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path girl.photo_one, width: 800, height: 100, crop: :fill %>);">
+
+  <div class="row space-cards">
+     <% @girls.each  do |girl| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path girl.photo_one, width: 400, height: 200, crop: :fill %>);">
         <div class="card-category"><%= girl.name %></div>
         <div class="card-description">
           <h2><%= girl.age %></h2>
@@ -19,8 +21,9 @@
         <%= link_to "", shop_girl_path(@shop, girl), class: "card-link" %>
       </div>
     </div>
+    <% end %>
   </div>
-  <% end %>
+
 </div>
 
 
