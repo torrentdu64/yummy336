@@ -2,20 +2,7 @@ ActiveAdmin.register Girl do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
- permit_params :shop_id,
-              :name,
-              :description,
-              :age,
-              :photo_one,
-              :photo_two,
-              :photo_three,
-              :photo_four,
-              :photo_five,
-              :photo_six,
-              :photo_seven,
-              :photo_eight,
-              :photo_nine,
-              :photo_ten,
+ permit_params :shop_id,:name,:description,:age,:photo_one,:photo_two,:photo_three,:photo_four,:photo_five,:photo_six,:photo_seven,:photo_eight,:photo_nine,:photo_ten
 #
 # or
 #
@@ -24,5 +11,17 @@ ActiveAdmin.register Girl do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
+#
+index do
+      selectable_column
+      column :shop_id
+      column :name
+      column :description
+      column :photo_one do |photo|
+
+        image_tag(photo.photo_one_url , size: "200x300")
+      end
+      actions
+  end
 
 end
