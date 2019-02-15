@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190214212959) do
+ActiveRecord::Schema.define(version: 20190215024036) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,16 @@ ActiveRecord::Schema.define(version: 20190214212959) do
     t.bigint "shop_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo_one"
+    t.string "photo_two"
+    t.string "photo_three"
+    t.string "photo_four"
+    t.string "photo_five"
+    t.string "photo_six"
+    t.string "photo_seven"
+    t.string "photo_eight"
+    t.string "photo_nine"
+    t.string "photo_ten"
     t.index ["shop_id"], name: "index_girls_on_shop_id"
   end
 
