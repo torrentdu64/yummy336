@@ -37,8 +37,50 @@
      </div>
   </div>
 </section>
+<div class="row">
+              <!-- <div   id="map"
+                              style="width: 100%;
+                              height: 480px;
+                              border-radius: 20px;"
+                              data-markers="<%= @markers.to_json %>"
+                              data-mapbox-api-key="<%= ENV['MAPBOX'] %>"
+                            ></div>
+            </div> -->
+    <div class="btn btn-success" target="_blank" onclick="window.open('https://www.google.com/maps/dir/Current+Location/336+New+North+Rd+Auckland', '_blank')">
+    map
+    </div>
+    <script>
+    function drive() {
+      var daddr = window.location.search.slice(1);
+      debugger;
+      if(daddr){
+       window.location = "https://www.google.com/maps/dir/?api=1&origin=<%= @girl.shop.longitude %>,<%= @girl.shop.latitude %>&destination="+ daddr +"&travelmode=driving";
+      }
+    }
+    </script>
+    https://www.google.com/maps/dir/?api=1&origin=<%= @girl.shop.latitude %>,<%= @girl.shop.longitude %>&destination=${daddr}&travelmode=driving
+
+   <!-- <script>
+    var daddr = window.location.search.slice(1);
+    console.log(daddr);
+    var lat = <%= @girl.shop.latitude %>
+    console.log(lat);
+    var long = <%= @girl.shop.longitude %>
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(data){
+        if (data.coord) {
+                var lat = <%= @girl.shop.latitude %>
+          console.log(lat);
+          var long = <%= @girl.shop.longitude %>
+          window.location = `https://maps.google.fr/maps?saddr=${addr}&daddr=${lat},${long}` ;
+        }
+      });
+    }
+  </script> -->
 <section id="menu" data-stellar-background-ratio="0.5">
+
           <div class="main-container">
+
                <div class="row">
 
 
@@ -51,8 +93,9 @@
 
                     <div class="col-xs-12 col-md-5 col-sm-4" id="profile">
                       <p><%= @girl.description %></p>
-                    </div>
 
+
+                    </div>
 
 
 
@@ -186,8 +229,10 @@
                     </div>
                     <%= render "advertises/index" %>
 
+                    </div>
 
                </div>
+
           </div>
      </section>
 
