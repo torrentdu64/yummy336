@@ -101,18 +101,20 @@
 
 
 
+                  <div class="max">
 
 
 
-                    <div class="col-md-4 col-sm-6">
+
+                    <div class="col-md-4 col-sm-6 ">
                          <!-- MENU THUMB -->
                          <div class="menu-thumb">
 
-                              <a href=<%= image_path('menu-image1.jpg') %> class="image-popup" title="American Breakfast">
+                              <a href=<%= cl_image_path @girl.photo_one %> class="image-popup" title="American Breakfast">
 
 
 
-                                   <%= image_tag "menu-image1.jpg", class: "img-responsive" %>
+                                   <%= cl_image_tag @girl.photo_one , class: "img-responsive" %>
 
                                    <div class="menu-info">
                                         <div class="menu-item">
@@ -131,9 +133,9 @@
                     <div class="col-md-4 col-sm-6">
                          <!-- MENU THUMB -->
                          <div class="menu-thumb">
-                              <a href=<%= image_path('menu-image2.jpg') %> class="image-popup" title="Self-made Salad">
+                              <a href=<%= cl_image_path @girl.photo_two %> class="image-popup" title="Self-made Salad">
 
-                                   <%= image_tag "menu-image2.jpg", class: "img-responsive" %>
+                                   <%= cl_image_tag @girl.photo_two, class: "img-responsive" %>
 
 
                                    <div class="menu-info">
@@ -152,10 +154,10 @@
                     <div class="col-md-4 col-sm-6">
                          <!-- MENU THUMB -->
                          <div class="menu-thumb">
-                              <a href=<%= image_path('menu-image3.jpg') %> class="image-popup" title="Chinese Noodle">
+                              <a href=<%= cl_image_path @girl.photo_three %> class="image-popup" title="Chinese Noodle">
 
 
-                                   <%= image_tag "menu-image3.jpg", class: "img-responsive" %>
+                                   <%= cl_image_tag @girl.photo_three, class: "img-responsive" %>
 
                                    <div class="menu-info">
                                         <div class="menu-item">
@@ -173,9 +175,9 @@
                     <div class="col-md-4 col-sm-6">
                          <!-- MENU THUMB -->
                          <div class="menu-thumb">
-                              <a href=<%= image_path('menu-image4.jpg') %> class="image-popup" title="Rice Soup">
+                              <a href=<%= cl_image_path @girl.photo_three %> class="image-popup" title="Rice Soup">
 
-                                    <%= image_tag "menu-image4.jpg", class: "img-responsive" %>
+                                    <%= cl_image_tag @girl.photo_three, class: "img-responsive" %>
 
                                    <div class="menu-info">
                                         <div class="menu-item">
@@ -190,12 +192,12 @@
                          </div>
                     </div>
 
-                    <div class="col-md-4 col-sm-6">
+                    <div class="col-md-4 col-sm-6" style="margin-left: 400px;">
                          <!-- MENU THUMB -->
                          <div class="menu-thumb">
-                              <a href=<%= image_path('menu-image5.jpg') %> class="image-popup" title="Project title">
+                              <a href=<%=  cl_image_path @girl.photo_three  %> class="image-popup" title="Project title">
 
-                                   <%= image_tag "menu-image5.jpg", class: "img-responsive" %>
+                                   <%= cl_image_tag @girl.photo_three, class: "img-responsive" %>
 
                                    <div class="menu-info">
                                         <div class="menu-item">
@@ -210,11 +212,11 @@
                          </div>
                     </div>
 
-                    <div class="col-md-4 col-sm-6">
+                    <div class="col-md-4 col-sm-6 ">
                          <!-- MENU THUMB -->
                          <div class="menu-thumb">
-                              <a href=<%= image_path('menu-image6.jpg') %> class="image-popup" title="Project title">
-                                   <%= image_tag "menu-image6.jpg", class: "img-responsive" %>
+                              <a href=<%= cl_image_path @girl.photo_three %> class="image-popup" title="Project title">
+                                   <%= cl_image_tag @girl.photo_three, class: "img-responsive" %>
                                    <div class="menu-info">
                                         <div class="menu-item">
                                              <h3>Big Flat Fried</h3>
@@ -227,6 +229,7 @@
                               </a>
                          </div>
                     </div>
+                   </div>
                     <%= render "advertises/index" %>
 
                     </div>
