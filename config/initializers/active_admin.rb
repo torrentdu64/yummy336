@@ -1,6 +1,10 @@
 # Add this line at the beginning, before `ActiveAdmin.setup do |config|`
 def authenticate_admin!
+  if current_user.admin == true
     redirect_to new_user_session_path unless current_user && current_user.admin
+  else
+    redirect_to root_path
+  end
 end
 
 ActiveAdmin.setup do |config|
