@@ -93,6 +93,13 @@
 
                     <div class="col-xs-12 col-md-5 col-sm-4" id="profile">
                       <p><%= @girl.description %></p>
+                      <ul>
+                        <% @girl.services.each do |service , allow| %>
+                              <% if allow == 'true' %>
+                           <li> <%= service %> </li>
+                              <% end %>
+                           <% end %>
+                      </ul>
 
 
                     </div>
