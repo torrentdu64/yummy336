@@ -17,18 +17,30 @@
                </div>
 
                <!-- MENU LINKS -->
-               <div class="collapse navbar-collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav navbar-nav-first">
+               <div class="" id="">
+                    <ul class="nav navbar-nav">
+                      <%= link_to t(".sign_in", default: "Login"), new_user_session_path %>
+                      <% if user_signed_in? %>
+                      <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+              <% end %>
+                      <% end %>
                          <li><a href="#home" data-target=".in" class="smoothScroll">Home</a></li>
                          <li><a href="#about" data-target=".in" class="smoothScroll">About</a></li>
                          <li><a href="#team" data-target=".in" class="smoothScroll">Chef</a></li>
                          <!-- <li><a href="#menu"  data-target=".in" class="smoothScroll">Girls</a></li> -->
+                         <% if user_signed_in? %>
+                           <%= link_to t(".sign_in", default: "Login"), new_user_session_path %>
+                         <% else %>
                          <li><%= link_to "girls", shop_girls_path(@shop) %></li>
+                         <% end %>
                          <li><a href="#contact" data-target=".in" class="smoothScroll">Contact</a></li>
+                         <%= link_to "Sign in ", new_user_session_path %>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                         <li><a href="#">Call Now! <i class="fa fa-phone"></i> <%= @shop.phone %></a></li>
+                         <li><a href="#">Call Now! <i class="fa fa-phone"></i> <%= @shop.phone  %></a></li>
+
                          <a href="#footer" class="section-btn">Reserve a table</a>
                     </ul>
                </div>

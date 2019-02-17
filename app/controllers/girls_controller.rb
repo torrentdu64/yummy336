@@ -1,8 +1,8 @@
 class GirlsController < ApplicationController
-
-  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_pinky, only: [:index, :show]
   before_action :find_girl, only: :show
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
 
   def index
     @girls = Girl.all
@@ -27,7 +27,7 @@ class GirlsController < ApplicationController
   end
 
   def set_pinky
-   @shop =  Shop.find_by( title: "Pinky Girls")
+   @shop =  Shop.find(params[:shop_id])
   end
 
 

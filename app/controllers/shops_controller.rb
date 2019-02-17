@@ -14,6 +14,7 @@ class ShopsController < ApplicationController
         infoWindow: render_to_string(partial: "/shops/map_info", locals: { shop: shop })
       }
     end
+
   end
 
 
@@ -25,5 +26,6 @@ class ShopsController < ApplicationController
     # slug name for the shop
     @shop =  Shop.find_by( title: "Pinky Girls")
   end
+
 
 end
