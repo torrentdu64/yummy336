@@ -55,7 +55,6 @@ ActiveRecord::Schema.define(version: 20190217041422) do
     t.string "photo_eight"
     t.string "photo_nine"
     t.string "photo_ten"
-    t.json "services", default: "{}", null: false
     t.string "origin"
     t.text "service"
     t.string "phone"

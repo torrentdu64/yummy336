@@ -38,6 +38,12 @@
   </div>
 </section>
 <div class="row">
+  <div class="col-xs-8 col-xs-offset-2">
+    <h3><%= @girl.phone %></h3>
+    <div class="btn btn-success" target="_blank" onclick="window.open('https://www.google.com/maps/dir/Current+Location/336+New+North+Rd+Auckland', '_blank')">
+    map
+    </div>
+  </div>
               <!-- <div   id="map"
                               style="width: 100%;
                               height: 480px;
@@ -46,10 +52,9 @@
                               data-mapbox-api-key="<%= ENV['MAPBOX'] %>"
                             ></div>
             </div> -->
-    <div class="btn btn-success" target="_blank" onclick="window.open('https://www.google.com/maps/dir/Current+Location/336+New+North+Rd+Auckland', '_blank')">
-    map
-    </div>
-    <script>
+
+</div>
+    <!-- <script>
     function drive() {
       var daddr = window.location.search.slice(1);
       debugger;
@@ -59,7 +64,7 @@
     }
     </script>
     https://www.google.com/maps/dir/?api=1&origin=<%= @girl.shop.latitude %>,<%= @girl.shop.longitude %>&destination=${daddr}&travelmode=driving
-
+ -->
    <!-- <script>
     var daddr = window.location.search.slice(1);
     console.log(daddr);
@@ -92,10 +97,18 @@
                     </div>
 
                     <div class="col-xs-12 col-md-5 col-sm-4" id="profile">
+
                       <p><%= @girl.description %></p>
-
-
+                       <p><%= @girl.origin %></p>
+                       <p><%= @girl.service %></p>
+                       <p><%= @girl.size %></p>
+                       <p><%= @girl.height  %></p>
+                       <p> <%= @girl.weight %></p>
+                       <p> <%= @girl.bust %></p>
+                       <p> <%= @girl.hair %></p>
                     </div>
+
+
 
 
 
