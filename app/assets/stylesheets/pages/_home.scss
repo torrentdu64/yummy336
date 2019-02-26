@@ -3,15 +3,20 @@
 .home-video{
   position: relative;
   left: 0px;
-
 }
-
-
 
 .hours{
   margin-left: 60%;
   margin-top: -7%;
 }
+
+.girls{
+  margin-left: 60%;
+    margin-top: -34%;
+}
+.btn-girls{
+    display: none;
+  }
 
 @media only screen and (max-width: 580px) {
   .hours{
@@ -19,6 +24,17 @@
     right: 211px;
     width: 335px;
   }
+  .girls{
+  display: none;
+  }
+  .btn-girls{
+    display: block;
+    width: 50%;
+    position: relative;
+    bottom: 450px;
+    left: 105px;
+  }
+
 
 }
 iframe {

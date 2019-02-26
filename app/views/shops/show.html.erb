@@ -228,14 +228,28 @@
 
      <!-- MENU-->
      <div class="row">
-      <div class="card" style="background-image: url('<%= image_path 'girls.jpg'%>');height: 700px;background-position: 10px -180px;">
-          <div class="card-category">Popular</div>
-          <div class="card-description">
-            <h2>See the tresor</h2>
-            <p>a common gold experience</p>
-          </div>
+      <div class="card" style="background-image: url('<%= image_path 'girls.jpg'%>');height: 700px;background-position: 10px -180px;background-repeat: no-repeat;">
           <%= link_to "", shop_girls_path(@shop), class: "card-link" %>
       </div>
+      <%= link_to "Girls", shop_girls_path(@shop), class: "btn-girls btn btn-primary" %>
+      <div class="col-xs-12 col-md-4 col-sm-8 girls">
+                 <div class="footer-info footer-open-hour">
+                      <div class="section-title">
+                           <h2 class="wow fadeInUp" data-wow-delay="0.2s">Open Hours</h2>
+                      </div>
+                      <div class="wow fadeInUp" data-wow-delay="0.4s">
+                           <p>Monday: Closed</p>
+                           <div>
+                                <strong>Tuesday to Friday</strong>
+                                <p>7:00 AM - 9:00 PM</p>
+                           </div>
+                           <div>
+                                <strong>Saturday - Sunday</strong>
+                                <p>11:00 AM - 10:00 PM</p>
+                           </div>
+                      </div>
+                 </div>
+              </div>
      </div>
 
 
