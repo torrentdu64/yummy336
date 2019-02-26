@@ -6,3 +6,19 @@
 .space-cards{
   margin-top: 30px;
 }
+
+.parallax{
+ /* The image used */
+  // background-image: url("<%= cl_image_url  'henry-co-568066-unsplash', width: 1500, height: 300 %>");
+
+  /* Set a specific height */
+  min-height: 350px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: -70px;
+  margin-right: -70px;
+}
