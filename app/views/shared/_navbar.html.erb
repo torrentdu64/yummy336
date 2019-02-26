@@ -22,12 +22,13 @@
                          <li><a href="#home" data-target=".in" class="smoothScroll">Home</a></li>
                          <li><a href="#about" data-target=".in" class="smoothScroll">About</a></li>
                          <li><a href="#team" data-target=".in" class="smoothScroll">Chef</a></li>
-                         <li><a href="#menu"  data-target=".in" class="smoothScroll">Menu</a></li>
+                         <!-- <li><a href="#menu"  data-target=".in" class="smoothScroll">Girls</a></li> -->
+                         <li><%= link_to "girls", shop_girls_path(@shop) %></li>
                          <li><a href="#contact" data-target=".in" class="smoothScroll">Contact</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                         <li><a href="#">Call Now! <i class="fa fa-phone"></i> 010 020 0340</a></li>
+                         <li><a href="#">Call Now! <i class="fa fa-phone"></i> <%= @shop.phone %></a></li>
                          <a href="#footer" class="section-btn">Reserve a table</a>
                     </ul>
                </div>

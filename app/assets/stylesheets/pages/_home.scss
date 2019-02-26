@@ -3,15 +3,20 @@
 .home-video{
   position: relative;
   left: 0px;
-
 }
-
-
 
 .hours{
   margin-left: 60%;
   margin-top: -7%;
 }
+
+.girls{
+  margin-left: 60%;
+    margin-top: -34%;
+}
+.btn-girls{
+    display: none;
+  }
 
 @media only screen and (max-width: 580px) {
   .hours{
@@ -19,5 +24,41 @@
     right: 211px;
     width: 335px;
   }
+  .girls{
+  display: none;
+  }
+  .btn-girls{
+    display: block;
+    width: 50%;
+    position: relative;
+    bottom: 450px;
+    left: 105px;
+  }
+
 
 }
+iframe {
+min-width: 100%;
+    min-height: 700px;
+    width: 100%;
+    height: 700px;
+    max-width: 1280px;
+    max-height: 720px;
+    position: relative;
+    top: -50px;
+    right: 0px;
+}
+
+// .videoWrapper {
+//     position: relative;
+//     padding-bottom: 56.25%; /* 16:9 */
+//     padding-top: 25px;
+//     height: 0;
+// }
+// .videoWrapper iframe {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+// }

@@ -1,15 +1,26 @@
 Rails.application.routes.draw do
-  get 'advertises/index'
 
-  get 'girls/index'
+  resources :shops , only: :show do
+    resources :girls, only: [:index, :show]
+  end
 
-  get 'girls/show'
 
-  get 'hours/index'
+  devise_for :users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  #get 'advertises/index'
 
-  get 'shops/show'
+  # get 'girls/index'
 
-  devise_for :users
+  # get 'girls/show'
+
+  # get 'hours/index'
+
+  # get 'shops/show'
+
+
+
   root to: 'shops#show'
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

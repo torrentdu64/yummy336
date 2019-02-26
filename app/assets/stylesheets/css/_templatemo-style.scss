@@ -314,7 +314,18 @@ http://www.templatemo.com/tm-515-eatery
       box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
       padding: 12px 0;
       margin-right: -20px;
+      .logo-position{
+        position: absolute;
+          left: 2%;
+          top: -5%;
+      }
     }
+
+    .logo-position{
+        position: absolute;
+          left: 2%;
+          top: 3%;
+      }
 
     .top-nav-collapse .navbar-brand {
       color: #454545;
@@ -346,10 +357,10 @@ http://www.templatemo.com/tm-515-eatery
   .wave{
     background: image-url('wave.png') center no-repeat;
     /* width: 100vh; */
-    min-height: 350px;
+    min-height: 450px;
     height: auto;
-    background-size: 220vh 120vh;
-    background-position: -49px -280px;
+    background-size: 230vh 120vh;
+    background-position: -50px -220px;
     position: relative;
     top: 430px;
     }

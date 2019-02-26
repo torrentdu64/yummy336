@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
+    <title>Pinky girls</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -15,17 +15,18 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
+    <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
-    <%= javascript_include_tag 'jquery.js' %>
-    <%= javascript_include_tag 'jquery.magnific-popup.min.js' %>
-    <%= javascript_include_tag 'jquery.stellar.min.js' %>
-    <%= javascript_include_tag 'bootstrap.min.js' %>
-    <%= javascript_include_tag 'owl.carousel.min.js' %>
+    <%= javascript_include_tag 'app/jquery.js' %>
+    <%= javascript_include_tag 'app/jquery.magnific-popup.min.js' %>
+    <%= javascript_include_tag 'app/jquery.stellar.min.js' %>
+    <%= javascript_include_tag 'app/bootstrap.min.js' %>
+    <%= javascript_include_tag 'app/owl.carousel.min.js' %>
 
-    <%= javascript_include_tag 'smoothscroll.js' %>
-    <%= javascript_include_tag 'wow.min.js' %>
-    <%= javascript_include_tag 'custom.js' %>
+    <%= javascript_include_tag 'app/smoothscroll.js' %>
+    <%= javascript_include_tag 'app/wow.min.js' %>
+    <%= javascript_include_tag 'app/custom.js' %>
     <%= javascript_pack_tag 'map' %>
 
 
