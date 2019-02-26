@@ -13,9 +13,35 @@
 
 }
 
+.pad-top{
+  padding-top: 60px;
+}
+
+.block-icon{
+  display: block;
+  margin-bottom: 20px;
+}
+
+.space-right{
+  margin-right: 30px;
+}
+
+@media (max-width: 768px) {
+  .mobile-space-top{
+    margin-top: 20px;
+  }
+  #profile{
+        display: contents;
+  }
+  .addr-btn{
+    color: white;
+  }
+}
 
 
 @media (min-width: 768px) {
+
+
 
     .slider .col-md-8 {
       padding-left: 0;

@@ -37,13 +37,24 @@
      </div>
   </div>
 </section>
-<div class="row">
-  <div class="col-xs-8 col-xs-offset-2">
-    <h3><%= @girl.phone %></h3>
-    <div class="btn btn-success" target="_blank" onclick="window.open('https://www.google.com/maps/dir/Current+Location/336+New+North+Rd+Auckland', '_blank')">
-    map
-    </div>
+<div class="container">
+  <div class="row pad-top">
+  <div class="col-xs-12 col-md-offset-1 col-md-4 text-center space-right">
+    <i class="fas fa-mobile fa-5x block-icon" ></i>
+    <a class="btn btn-primary" href="tel:+<%= @girl.phone %>">
+       <%= @girl.phone %>
+    </a>
   </div>
+    <div class="col-xs-12 col-md-4  text-center mobile-space-top">
+        <div  target="_blank" onclick="window.open('https://www.google.com/maps/dir/Current+Location/336+New+North+Rd+Auckland', '_blank')">
+           <i class="fas fa-map-marked-alt fa-5x block-icon"></i>
+           <div class="btn btn-primary">
+           <p class="addr-btn"><%= @girl.shop.address %></p>
+          </div>
+      </div>
+  </div>
+</div>
+
               <!-- <div   id="map"
                               style="width: 100%;
                               height: 480px;
