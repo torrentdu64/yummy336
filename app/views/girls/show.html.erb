@@ -38,14 +38,18 @@
   </div>
 </section>
 <div class="container">
+
   <div class="row pad-top">
-  <div class="col-xs-12 col-md-offset-1 col-md-4 text-center space-right">
+    <div class="wave wave-girl" >
+
+  </div>
+  <div class="col-xs-12 col-md-offset-1 col-md-4 text-center space-right up-component">
     <i class="fas fa-mobile fa-5x block-icon" ></i>
     <a class="btn btn-primary" href="tel:+<%= @girl.phone %>">
        <%= @girl.phone %>
     </a>
   </div>
-    <div class="col-xs-12 col-md-4  text-center mobile-space-top">
+    <div class="col-xs-12 col-md-4  text-center mobile-space-top up-component">
         <div  target="_blank" onclick="window.open('https://www.google.com/maps/dir/Current+Location/336+New+North+Rd+Auckland', '_blank')">
            <i class="fas fa-map-marked-alt fa-5x block-icon"></i>
              <div class="btn btn-primary">
@@ -219,7 +223,7 @@
                          </div>
                     </div>
 
-                    <div class="col-md-4 col-sm-6" style="margin-left: 400px;">
+                    <div class="col-md-4 col-sm-6" style="margin-left: 350px;">
                          <!-- MENU THUMB -->
                          <div class="menu-thumb">
                               <a href='<%=  cl_image_path @girl.photo_three  %>' class="image-popup" title="Project title">

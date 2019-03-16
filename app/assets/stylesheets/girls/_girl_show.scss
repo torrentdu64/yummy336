@@ -10,6 +10,7 @@
   position: sticky !important; /* !important to override Gmaps inline CSS */
   top: 90px !important;
   width: 30%;
+  margin-bottom: 200px;
 
 }
 
@@ -44,8 +45,26 @@
     margin-left: 20px;
     width: 90%;
   }
+  .wave-girl{
+    position: absolute;
+    top: 380px;
+    z-index: 100;
+  }
+
+
+
+
+
 }
 
+.up-component{
+  z-index: 150;
+}
+.wave-girl{
+    position: absolute;
+    top: 420px;
+    z-index: 100;
+  }
 
 @media (min-width: 768px) {
 
