@@ -220,6 +220,7 @@ http://www.templatemo.com/tm-515-eatery
     color: #ffffff;
     font-size: 18px;
     font-weight: bold;
+    margin-top: -25px;
   }
 
   .custom-navbar .navbar-brand span {
@@ -305,6 +306,7 @@ http://www.templatemo.com/tm-515-eatery
     .custom-navbar {
       border-bottom: 0;
       background: 0 0;
+
     }
 
     .custom-navbar.top-nav-collapse {
@@ -314,6 +316,7 @@ http://www.templatemo.com/tm-515-eatery
       box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
       padding: 12px 0;
       margin-right: -20px;
+
       .logo-position{
         position: absolute;
           left: 2%;
@@ -328,6 +331,7 @@ http://www.templatemo.com/tm-515-eatery
       }
 
     .top-nav-collapse .navbar-brand {
+
       color: #454545;
     }
 
@@ -493,15 +497,18 @@ http://www.templatemo.com/tm-515-eatery
     position: absolute;
   }
   @media only screen and (max-width: 580px) {
+    .parallax{
+      width: 120%;
+    }
     .web-video{
       display: none;
     }
     .mobile-video{
       display: block;
-      width: 108%;
+      width: 109%;
     }
     .heart-map{
-      width: 330px !important;
+      width: 315px !important;
       height: 309px  !important;
 
     }
@@ -516,11 +523,11 @@ http://www.templatemo.com/tm-515-eatery
     // top: 430px;
     // min-width: 720px;
      background: image-url('wave-mobile.png') center no-repeat;
-    background-size: 670px 242px;
+    background-size: 670px 400px;
     width: 100%;
-    min-width: 370px;
+    min-width: 460px;
     max-width: 498px;
-    top: 588px;
+    top: 430px;
     }
 
     .about-image img, .team-thumb img {
@@ -1008,7 +1015,7 @@ http://www.templatemo.com/tm-515-eatery
     }
 
     #menu .menu-thumb {
-      width: 103%;
+      width: 100%;
     }
 
     #testimonial {
@@ -1100,6 +1107,10 @@ http://www.templatemo.com/tm-515-eatery
 
 
   @media only screen and (max-width: 580px) {
+    .max{
+          margin-left: 15px;
+    }
+
     h1 {
       font-size: 2.1em;
     }

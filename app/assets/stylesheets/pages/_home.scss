@@ -1,4 +1,11 @@
 // Specific CSS for your home-page
+//
+.background{
+  background-image: cloudinary-path('girls.jpg');
+  min-height: 700px;
+  background-position: 10px -180px;
+  background-repeat: no-repeat;
+}
 
 .home-video{
   position: relative;
