@@ -673,7 +673,7 @@ http://www.templatemo.com/tm-515-eatery
   }
 
   .menu-thumb img {
-    width: 92%;
+    width: 100%;
     transition: 0.5s;
   }
 
@@ -685,7 +685,7 @@ http://www.templatemo.com/tm-515-eatery
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    width: 102%;
+    width: 100%;
   }
 
   .menu-thumb .menu-info {
@@ -1107,6 +1107,10 @@ http://www.templatemo.com/tm-515-eatery
 
 
   @media only screen and (max-width: 580px) {
+    .menu-thumb img {
+        width: 92%;
+        transition: 0.5s;
+      }
     .max{
           margin-left: 15px;
     }

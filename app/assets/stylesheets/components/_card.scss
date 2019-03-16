@@ -6,6 +6,13 @@
   color: white;
   position: relative;
 }
+
+@media (min-width: 600px)  {
+  .card {
+      left: -80px;
+      width: 112%;
+  }
+}
 .card-user {
   position: absolute;
   right: 10px;
