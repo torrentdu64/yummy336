@@ -47,9 +47,9 @@
   }
   .wave-girl{
     position: absolute;
-    top: 380px;
+    top: 380px !important;
     z-index: 100;
-        min-width: 448px;
+    min-width: 435px !important;
   }
   // .wave{
   //   top: 390px !important;

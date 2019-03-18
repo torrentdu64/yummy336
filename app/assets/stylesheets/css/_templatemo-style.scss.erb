@@ -559,7 +559,8 @@ http://www.templatemo.com/tm-515-eatery
 
   #team {
      //background: #f9f9f9;
-     background: asset-url('contact-back.jpg');
+     background-image: url( <%= asset_path 'contact-back.jpg' %>);
+
      border-radius: 30px;
      // background-repeat:no-repeat;
 
@@ -569,9 +570,7 @@ http://www.templatemo.com/tm-515-eatery
     // background-size: 20px auto;
   }
   @media only screen and (max-width: 580px) {
-     #team {
-      // width: 475px;
-     }
+
 
   }
 
