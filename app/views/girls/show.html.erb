@@ -24,7 +24,7 @@
           </div>
      </div>
 
-     <div class="item " style="background-image: <%= image_tag 'girls'%>">
+     <div class="item " style="background-image:url(<%= cl_image_path @girl.photo_three, gravity: :face %>);">
           <div class="caption">
                <div class="container">
                     <div class="col-md-8 col-sm-12">
