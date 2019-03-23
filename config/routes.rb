@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   resources :shops , only: :show do
+    get :get_random_girl
     resources :girls, only: [:index, :show]
+    resources :advertises, only: [:index]
   end
 
 

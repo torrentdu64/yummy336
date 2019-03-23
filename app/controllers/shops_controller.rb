@@ -1,8 +1,8 @@
 class ShopsController < ApplicationController
 
-  skip_before_action :authenticate_user!, only: [ :show ]
+  skip_before_action :authenticate_user!, only: [ :show , :get_random_girl ]
 
-   before_action :find_pinky, only: [ :show ]
+   before_action :find_pinky, only: [ :show, :get_random_girl ]
 
   def show
     @shops = Shop.where.not(latitude: nil, longitude: nil)
@@ -17,8 +17,15 @@ class ShopsController < ApplicationController
 
   end
 
+  def get_random_girl
+    @girl = Girl.order("RANDOM()").first
+    redirect_to shop_girl_path( @shop ,@girl)
+  end
+
 
   private
+
+
 
 
 
