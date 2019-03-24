@@ -1,9 +1,9 @@
 class AdvertisesController < ApplicationController
-  before_action :set_pinky, only: [:index]
-  skip_before_action :authenticate_user!, only: [:index]
+  before_action :set_pinky, only: [:wechat]
+  skip_before_action :authenticate_user!, only: [:wechat]
 
-  def index
-    @ads = Advertise.all
+  def wechat
+     @ads = Advertise.all
   end
 
   private

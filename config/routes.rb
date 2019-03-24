@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
-  resources :shops , only: :show do
+  resources :shops , only: :show, path: 'pinky-girls' do
     get :get_random_girl
-    resources :girls, only: [:index, :show]
-    resources :advertises, only: [:index]
+    resources :girls, only: [:index, :show] , path: 'escorts' do
+      get :next
+      get :prev
+    end
+    #resources :advertises, only: [:wechat]
+    get 'wechat', to: 'advertises#wechat' , :as => :wechat
   end
 
 

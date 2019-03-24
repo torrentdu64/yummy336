@@ -3,6 +3,14 @@
   align-items: stretch;
 }
 
+.prev-position{
+  z-index: 500;
+}
+
+.next-position{
+  z-index: 500;
+}
+
 
 #profile {
   flex: 0 0 450px;
