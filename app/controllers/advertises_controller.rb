@@ -1,9 +1,15 @@
 class AdvertisesController < ApplicationController
-  before_action :set_pinky, only: [:wechat]
-  skip_before_action :authenticate_user!, only: [:wechat]
+  before_action :set_pinky, only: [:wechat, :website, :instagram]
+  skip_before_action :authenticate_user!, only: [:wechat, :website, :instagram]
 
   def wechat
      @ads = Advertise.all
+  end
+
+  def website
+  end
+
+  def instagram
   end
 
   private

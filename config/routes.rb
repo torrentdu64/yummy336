@@ -11,6 +11,10 @@ Rails.application.routes.draw do
     end
     #resources :advertises, only: [:wechat]
     get 'wechat', to: 'advertises#wechat' , :as => :wechat
+
+    get 'website', to: 'advertises#website', :as => :website
+
+    get 'instagram', to: 'advertises#instagram', :as => :instagram
   end
 
 
