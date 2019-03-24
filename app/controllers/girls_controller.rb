@@ -9,15 +9,15 @@ class GirlsController < ApplicationController
   end
 
   def show
-    @shops = Shop.where.not(latitude: nil, longitude: nil)
+    # @shops = Shop.where.not(latitude: nil, longitude: nil)
 
-    @markers = @shops.map do |shop|
-      {
-        lng: shop.longitude,
-        lat: shop.latitude,
-        infoWindow: render_to_string(partial: "/shops/map_info", locals: { shop: shop })
-      }
-    end
+    # @markers = @shops.map do |shop|
+    #   {
+    #     lng: shop.longitude,
+    #     lat: shop.latitude,
+    #     infoWindow: render_to_string(partial: "/shops/map_info", locals: { shop: shop })
+    #   }
+    # end
   end
 
   def next

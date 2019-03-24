@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  devise_for :users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   resources :shops , only: :show, path: 'pinky-girls' do
     get :get_random_girl
     resources :girls, only: [:index, :show] , path: 'escorts' do
@@ -11,8 +14,7 @@ Rails.application.routes.draw do
   end
 
 
-  devise_for :users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
+
   #get 'advertises/index'
 
   # get 'girls/index'

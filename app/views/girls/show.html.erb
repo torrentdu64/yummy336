@@ -101,8 +101,6 @@
     <div class="col-xs-offset-2 col-xs-4 mobile-space-top col-md-offset-1 col-md-1 up-component">
       <%= link_to "prev girl", shop_girl_prev_path(@shop, @girl), class: "btn btn-danger " %>
     </div>
-
-
     <div class=" col-xs-5 mobile-space-top col-md-offset-8 col-md-1 up-component">
       <%= link_to "next girl", shop_girl_next_path(@shop, @girl), class: "btn btn-success  " %>
     </div>
@@ -150,16 +148,16 @@
 
 
 
-
+                    <% if @girl.photo_four.present? %>
                     <div class="col-md-4 col-sm-6 ">
                          <!-- MENU THUMB -->
                          <div class="menu-thumb">
 
-                              <a href='<%= cl_image_path @girl.photo_one %>'class="image-popup" title="American Breakfast">
+                              <a href='<%= cl_image_path @girl.photo_four %>'class="image-popup" title="American Breakfast">
 
 
 
-                                   <%= cl_image_tag @girl.photo_one , class: "img-responsive", width: 500, height: 600, crop: :fill %>
+                                   <%= cl_image_tag @girl.photo_four , class: "img-responsive", width: 500, height: 600, crop: :fill %>
 
                                    <div class="menu-info">
                                         <div class="menu-item">
@@ -174,13 +172,14 @@
                               </a>
                          </div>
                     </div>
-
+                    <% end %>
+                    <% if @girl.photo_five.present? %>
                     <div class="col-md-4 col-sm-6">
                          <!-- MENU THUMB -->
                          <div class="menu-thumb">
-                      <a href='<%= cl_image_path @girl.photo_two %>' class="image-popup" title="Self-made Salad">
+                      <a href='<%= cl_image_path @girl.photo_five %>' class="image-popup" title="Self-made Salad">
 
-                                   <%= cl_image_tag @girl.photo_two, class: "img-responsive", width: 500, height: 600, crop: :fill %>
+                                   <%= cl_image_tag @girl.photo_five, class: "img-responsive", width: 500, height: 600, crop: :fill %>
 
 
                                    <div class="menu-info">
@@ -195,14 +194,15 @@
                               </a>
                          </div>
                     </div>
-
+                    <% end %>
+                    <% if @girl.photo_six.present? %>
                     <div class="col-md-4 col-sm-6">
                          <!-- MENU THUMB -->
                          <div class="menu-thumb">
-                              <a href='<%= cl_image_path @girl.photo_three %>' class="image-popup" title="Chinese Noodle">
+                              <a href='<%= cl_image_path @girl.photo_six %>' class="image-popup" title="Chinese Noodle">
 
 
-                                   <%= cl_image_tag @girl.photo_three, class: "img-responsive", width: 500, height: 600, crop: :fill %>
+                                   <%= cl_image_tag @girl.photo_six, class: "img-responsive", width: 500, height: 600, crop: :fill %>
 
                                    <div class="menu-info">
                                         <div class="menu-item">
@@ -216,13 +216,14 @@
                               </a>
                          </div>
                     </div>
-
+                    <% end %>
+                  <% if @girl.photo_seven.present? %>
                     <div class="col-md-4 col-sm-6">
                          <!-- MENU THUMB -->
                          <div class="menu-thumb">
-                              <a href='<%= cl_image_path @girl.photo_three %>' class="image-popup" title="Rice Soup">
+                              <a href='<%= cl_image_path @girl.photo_seven %>' class="image-popup" title="Rice Soup">
 
-                                    <%= cl_image_tag @girl.photo_three, class: "img-responsive", width: 500, height: 600, crop: :fill %>
+                                    <%= cl_image_tag @girl.photo_seven, class: "img-responsive", width: 500, height: 600, crop: :fill  %>
 
                                    <div class="menu-info">
                                         <div class="menu-item">
@@ -236,13 +237,14 @@
                               </a>
                          </div>
                     </div>
-
+                    <% end %>
+                    <% if @girl.photo_eight.present? %>
                     <div class="col-md-4 col-sm-6" style="margin-left: 350px;">
                          <!-- MENU THUMB -->
                          <div class="menu-thumb">
-                              <a href='<%=  cl_image_path @girl.photo_three  %>' class="image-popup" title="Project title">
+                              <a href='<%=  cl_image_path @girl.photo_eight  %>' class="image-popup" title="Project title">
 
-                                   <%= cl_image_tag @girl.photo_three, class: "img-responsive", width: 500, height: 600, crop: :fill %>
+                                   <%= cl_image_tag @girl.photo_eight, class: "img-responsive", width: 500, height: 600, crop: :fill %>
 
                                    <div class="menu-info">
                                         <div class="menu-item">
@@ -256,12 +258,13 @@
                               </a>
                          </div>
                     </div>
-
+                    <% end %>
+                    <% if @girl.photo_nine.present? %>
                     <div class="col-md-4 col-sm-6 " >
                          <!-- MENU THUMB -->
                          <div class="menu-thumb">
-                              <a href='<%= cl_image_path @girl.photo_three %>'class="image-popup" title="Project title">
-                                   <%= cl_image_tag @girl.photo_three, class: "img-responsive", width: 500, height: 600, crop: :fill %>
+                              <a href='<%= cl_image_path @girl.photo_nine %>'class="image-popup" title="Project title">
+                                   <%= cl_image_tag @girl.photo_nine, class: "img-responsive", width: 500, height: 600, crop: :fill %>
                                    <div class="menu-info">
                                         <div class="menu-item">
                                              <h3>Big Flat Fried</h3>
@@ -274,6 +277,7 @@
                               </a>
                          </div>
                     </div>
+                    <% end %>
                    </div>
                     <%= render "advertises/index" %>
 
