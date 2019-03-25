@@ -1,12 +1,24 @@
 Rails.application.routes.draw do
 
-  resources :shops , only: :show do
-    resources :girls, only: [:index, :show]
+  devise_for :users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
+  resources :shops , only: :show, path: 'pinky-girls' do
+    get :get_random_girl
+    resources :girls, only: [:index, :show] , path: 'escorts' do
+      get :next
+      get :prev
+    end
+    #resources :advertises, only: [:wechat]
+    get 'wechat', to: 'advertises#wechat' , :as => :wechat
+
+    get 'website', to: 'advertises#website', :as => :website
+
+    get 'instagram', to: 'advertises#instagram', :as => :instagram
   end
 
 
-  devise_for :users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
+
   #get 'advertises/index'
 
   # get 'girls/index'

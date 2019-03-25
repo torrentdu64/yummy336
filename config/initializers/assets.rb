@@ -12,3 +12,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
  Rails.application.config.assets.precompile += %w( app/jquery.js app/bootstrap.min.js app/owl.carousel.min.js app/jquery.magnific-popup.min.js app/jquery.stellar.min.js app/smoothscroll.js app/wow.min.js app/custom.js )
+ #delete if conflic to prod
+ Rails.application.config.assets.precompile += %w( .svg .eot .woff .ttf .png .jpg .gif)
