@@ -21,6 +21,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'rails-i18n', '5.0.3'
 
 
 group :development do

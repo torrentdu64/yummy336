@@ -40,7 +40,7 @@
               <div class="col-xs-12 col-md-4 col-sm-8 hours">
                  <div class="footer-info footer-open-hour">
                       <div class="section-title">
-                           <h2 class="wow fadeInUp" data-wow-delay="0.2s">Open Hours</h2>
+                           <h2 class="wow fadeInUp" data-wow-delay="0.2s"><%= t(".hours")%></h2>
                       </div>
                       <div class="wow fadeInUp" data-wow-delay="0.4s">
                            <p>Monday: Closed</p>
@@ -115,7 +115,7 @@
                     <div class="col-md-6 col-sm-12">
                          <div class="about-info">
                               <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
-                                   <h4>Come to paradise</h4>
+                                   <h4><%= t(".paradise") %></h4>
                                    <h2><%= @shop.address %></h2>
                               </div>
 
@@ -167,11 +167,11 @@
         <%= link_to shop_girls_path(@shop) do %>
                  <div class="footer-info footer-open-hour">
                       <div class="section-title">
-                           <h2 class="wow fadeInUp" data-wow-delay="0.2s">Girls</h2>
+                           <h2 class="wow fadeInUp" data-wow-delay="0.2s"><%= t(".girls") %></h2>
                       </div>
                       <div class="wow fadeInUp" data-wow-delay="0.4s">
                           <div class="btn btn-primary">
-                              They waiting you ...
+                              <%= t(".girls-text") %>
                           </div>
                       </div>
                  </div>
@@ -185,14 +185,14 @@
      <div class="container">
 
 
-     <section id="team"  data-stellar-background-ratio="0.5" class="team-position">
+     <section id="team"   class="team-position">
           <div class="container">
                <div class="row">
 
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-                              <h2>Meet Pinky Girls</h2>
-                              <h4>We are nice &amp; friendly</h4>
+                              <h2><%= t(".meet")%></h2>
+                              <h4><%= t(".friendly")%></h4>
                          </div>
                     </div>
 
@@ -203,7 +203,7 @@
 
                                    <div class="team-hover">
                                         <div class="team-item">
-                                             <h4>Duis vel lacus id magna mattis vehicula</h4>
+                                             <h4><%= t(".team-item-wechat") %></h4>
                                              <ul class="social-icon">
                                                   <li><%= image_tag "pinkygirls.png"  %></li>
                                              </ul>
@@ -213,8 +213,8 @@
                          </div>
 
                          <div class="team-info">
-                              <h3>Contact wechat</h3>
-                              <p>see the moments</p>
+                              <h3><%= t(".contact-wechat") %></h3>
+                              <p><%= t(".moments") %></p>
                          </div>
                     </div>
 
@@ -224,7 +224,7 @@
                               <%= image_tag "web-contact.png", class: "img-responsive web" %>
                                    <div class="team-hover">
                                         <div class="team-item">
-                                             <h4>Cras suscipit neque quis odio feugiat</h4>
+                                             <h4><%= t(".team-item-website") %></h4>
                                              <ul class="social-icon">
                                                   <li><%= image_tag "pinkygirls.png"  %>
                                                   </li>
@@ -234,8 +234,8 @@
                             <% end %>
                          </div>
                          <div class="team-info">
-                              <h3>Contact insta</h3>
-                              <p>Owner &amp; Manager</p>
+                              <h3><%= t(".contact-web") %></h3>
+                              <p><%= t(".web-p") %></p>
                          </div>
                     </div>
 
@@ -246,7 +246,7 @@
                               <%= image_tag "insta-contact.png", class: "img-responsive" %>
                                    <div class="team-hover">
                                         <div class="team-item">
-                                             <h4>Etiam auctor enim tristique faucibus</h4>
+                                             <h4><%= t(".team-item-insta") %></h4>
                                              <ul class="social-icon">
                                                   <li><li><%= image_tag "pinkygirls.png"  %>
 
@@ -257,8 +257,8 @@
                            <% end %>
                          </div>
                          <div class="team-info">
-                              <h3>website ads</h3>
-                              <p>Pizza Specialist</p>
+                              <h3><%= t(".instagam")%></h3>
+                              <p><%= t(".insta-p") %></p>
                          </div>
                     </div>
 
