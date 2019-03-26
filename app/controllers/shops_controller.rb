@@ -13,6 +13,7 @@ class ShopsController < ApplicationController
         lat: shop.latitude,
         infoWindow: render_to_string(partial: "/shops/map_info", locals: { shop: shop })
       }
+
     end
 
   end
