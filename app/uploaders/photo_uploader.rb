@@ -45,4 +45,30 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+  # Apply an incoming chained transformation: limit image to 1000x1200 and
+  # add a 30-pixel watermark 5 pixels from the south east corner.
+  process :mark
+  # version :watermarke do
+  #   cloudinary_transformation :overlay => "pinkygirls",
+  #      :width => 80, :crop => :scale,
+  #      :gravity => :south_east, :x => 5, :y => 5,
+  #      :html_width => 300, :html_height => 200
+  # end
+  # cloudinary_transformation :transformation => [
+
+  #     {:overlay => "pinkygirls",
+  #      :width => 80, :crop => :scale,
+  #      :gravity => :south_east, :x => 5, :y => 5,
+  #      :html_width => 300, :html_height => 200}
+  #   ]
+
+  def mark
+    return :overlay => "pinkygirls",
+       :width => 200, :crop => :fill
+
+  end
+
+  # Eagerly transform image to 150x200 with a sepia effect applied and then
+  # rotate the resulting image by 10 degrees.
+
 end
