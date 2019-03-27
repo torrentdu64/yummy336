@@ -66,3 +66,16 @@ en:
       team-item-insta: "Etiam auctor enim tristique faucibus"
       instagam: "Contact instagram"
       insta-p: "Pizza Specialist"
+
+  girls:
+    index:
+      girls-title: "Divine Girls"
+      candy: "Choose you Candy"
+
+    show:
+      prev: "prev girl"
+      next: "next girl"
+      owl-1: "Her effortless charm"
+      owl-2: "The irresistible Girl in Auckland flaunts an enticing smile"
+      owl-3: "Others Girls"
+

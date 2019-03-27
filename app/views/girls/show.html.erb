@@ -13,9 +13,9 @@
           <div class="caption">
                <div class="container">
                     <div class="col-md-8 col-sm-12">
-                         <h3>Eatery Cafe &amp; Restaurant</h3>
-                         <h1>Our mission is to provide an unforgettable experience</h1>
-                         <a href="#team" class="section-btn btn btn-default smoothScroll">Meet our chef</a>
+                         <h3><%= t(".owl-1") %></h3>
+                         <h1><%= t(".owl-2") %></h1>
+                         <a href="#team" class="section-btn btn btn-default smoothScroll"><%= t(".owl-3") %></a>
                     </div>
                </div>
           </div>
@@ -25,9 +25,9 @@
           <div class="caption">
                <div class="container">
                     <div class="col-md-8 col-sm-12">
-                         <h3>Your Perfect Breakfast</h3>
-                         <h1>The best dinning quality can be here too!</h1>
-                         <a href="#menu" class="section-btn btn btn-default smoothScroll">Discover menu</a>
+                         <h3><%= t("") %>Your Perfect Breakfast</h3>
+                         <h1><%= t("") %>The best dinning quality can be here too!</h1>
+                         <a href="#menu" class="section-btn btn btn-default smoothScroll"><%= t("") %>Discover menu</a>
                     </div>
                </div>
           </div>
@@ -37,9 +37,9 @@
           <div class="caption">
                <div class="container">
                     <div class="col-md-8 col-sm-12">
-                         <h3>New Restaurant in Town</h3>
-                         <h1>Enjoy our special menus every Sunday and Friday</h1>
-                         <a href="#contact" class="section-btn btn btn-default smoothScroll">Reservation</a>
+                         <h3><%= t("") %>New Restaurant in Town</h3>
+                         <h1><%= t("") %>Enjoy our special menus every Sunday and Friday</h1>
+                         <a href="#contact" class="section-btn btn btn-default smoothScroll"><%= t("") %>Reservation</a>
                     </div>
                </div>
           </div>
@@ -108,10 +108,10 @@
 
   <div class="row">
     <div class="col-xs-offset-2 col-xs-4 mobile-space-top col-md-offset-1 col-md-1 up-component">
-      <%= link_to "prev girl", shop_girl_prev_path(@shop, @girl), class: "btn btn-danger " %>
+      <%= link_to t(".prev"), shop_girl_prev_path(@shop, @girl), class: "btn btn-danger " %>
     </div>
     <div class=" col-xs-5 mobile-space-top col-md-offset-8 col-md-1 up-component">
-      <%= link_to "next girl", shop_girl_next_path(@shop, @girl), class: "btn btn-success  " %>
+      <%= link_to  t(".next"), shop_girl_next_path(@shop, @girl), class: "btn btn-success  " %>
     </div>
 
 
@@ -131,7 +131,8 @@
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
                               <h2>Our Girls</h2>
-                              <h4>Sweet &amp; Lovely</h4>
+                              <h2><%= @girl.name %></h2>
+                              <h4><%= t("") %>Sweet &amp; Lovely</h4>
                          </div>
                     </div>
 
@@ -170,11 +171,11 @@
 
                                    <div class="menu-info">
                                         <div class="menu-item">
-                                             <h3>American Breakfast</h3>
-                                             <p>Tomato / Eggs / Sausage</p>
+                                             <h3><%= t("") %>American Breakfast</h3>
+                                             <p>T<%= t("") %>omato / Eggs / Sausage</p>
                                         </div>
                                         <div class="menu-price">
-                                             <span>$25</span>
+                                             <span><%= t("") %>$25</span>
                                         </div>
                                    </div>
 
@@ -193,11 +194,11 @@
 
                                    <div class="menu-info">
                                         <div class="menu-item">
-                                             <h3>Self-made Salad</h3>
-                                             <p>Green / Fruits / Healthy</p>
+                                             <h3><%= t("") %>Self-made Salad</h3>
+                                             <p><%= t("") %>Green / Fruits / Healthy</p>
                                         </div>
                                         <div class="menu-price">
-                                             <span>$18</span>
+                                             <span><%= t("") %>$18</span>
                                         </div>
                                    </div>
                               </a>
@@ -215,11 +216,11 @@
 
                                    <div class="menu-info">
                                         <div class="menu-item">
-                                             <h3>Chinese Noodle</h3>
-                                             <p>Pepper / Chicken / Vegetables</p>
+                                             <h3><%= t("") %>Chinese Noodle</h3>
+                                             <p><%= t("") %>Pepper / Chicken / Vegetables</p>
                                         </div>
                                         <div class="menu-price">
-                                             <span>$34</span>
+                                             <span><%= t("") %>$34</span>
                                         </div>
                                    </div>
                               </a>
@@ -236,11 +237,11 @@
 
                                    <div class="menu-info">
                                         <div class="menu-item">
-                                             <h3>Rice Soup</h3>
-                                             <p>Green / Chicken</p>
+                                             <h3><%= t("") %>Rice Soup</h3>
+                                             <p><%= t("") %>Green / Chicken</p>
                                         </div>
                                         <div class="menu-price">
-                                             <span>$28</span>
+                                             <span><%= t("") %>$28</span>
                                         </div>
                                    </div>
                               </a>
@@ -257,11 +258,11 @@
 
                                    <div class="menu-info">
                                         <div class="menu-item">
-                                             <h3>Deli Burger</h3>
-                                             <p>Beef / Fried Potatoes</p>
+                                             <h3><%= t("") %>Deli Burger</h3>
+                                             <p><%= t("") %>Beef / Fried Potatoes</p>
                                         </div>
                                         <div class="menu-price">
-                                             <span>$46</span>
+                                             <span><%= t("") %>$46</span>
                                         </div>
                                    </div>
                               </a>
@@ -276,11 +277,11 @@
                                    <%= cl_image_tag @girl.photo_nine, class: "img-responsive", width: 500, height: 600, crop: :fill %>
                                    <div class="menu-info">
                                         <div class="menu-item">
-                                             <h3>Big Flat Fried</h3>
-                                             <p>Pepper / Crispy</p>
+                                             <h3><%= t("") %>Big Flat Fried</h3>
+                                             <p><%= t("") %>Pepper / Crispy</p>
                                         </div>
                                         <div class="menu-price">
-                                             <span>$30</span>
+                                             <span><%= t("") %>$30</span>
                                         </div>
                                    </div>
                               </a>

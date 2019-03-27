@@ -25,9 +25,11 @@
                          <% end %>
                          <!-- <li><a href="#team" data-target=".in" class="smoothScroll">Chef</a></li> -->
                          <!-- <li><a href="#menu"  data-target=".in" class="smoothScroll">Girls</a></li> -->
-                         <li><%= link_to t("girls"), shop_girls_path(@shop) %></li>
-                         <% if controller_name == 'shops' && action_name == 'show' %>
+
+                         <% if :controller === 'shops' && :action === 'show' %>
                          <li><a href="#team" data-target=".in" class="smoothScroll"><%= t(".contact")%></a></li>
+                         <% else %>
+                            <li><%= link_to t(".girls"), shop_girls_path(@shop) %></li>
                          <% end %>
                     </ul>
 
