@@ -44,10 +44,14 @@ en:
       find: "Find us"
       reservation: "Reservation"
       pinky: "Pinky Girls"
+      days: "Monday ~ Sunday"
+      times: "12 pm ~ 6 am"
 
   shops:
     show:
       hours: "Open Hours"
+      days: "Monday ~ Sunday"
+      times: "12 pm ~ 6 am"
       paradise: "Come to paradise"
       girls: "Girls"
       girls-text: "They waiting you ..."

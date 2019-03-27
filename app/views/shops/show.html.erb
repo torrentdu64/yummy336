@@ -28,14 +28,17 @@
                            <h2 class="wow fadeInUp" data-wow-delay="0.2s"><%= t(".hours")%></h2>
                       </div>
                       <div class="wow fadeInUp" data-wow-delay="0.4s">
-                           <p>Monday: Closed</p>
-                           <div>
+                           <!-- <p>Monday: Closed</p> -->
+                           <br>
+                           <br>
+
+                           <!-- <div>
                                 <strong>Tuesday to Friday</strong>
                                 <p>7:00 AM - 9:00 PM</p>
-                           </div>
+                           </div> -->
                            <div>
-                                <strong>Saturday - Sunday</strong>
-                                <p>11:00 AM - 10:00 PM</p>
+                                <strong><%= t(".days")%></strong>
+                                <p><%= t(".times")%></p>
                            </div>
                       </div>
                  </div>
@@ -101,6 +104,7 @@
                          <div class="about-info">
                               <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
                                    <h4><%= t(".paradise") %></h4>
+                                   <a href="tel:+<%= @shop.phone %>"><%= t(".call") %> <i class="fa fa-phone"></i> <%= @shop.phone %></a>
                                    <h2><%= @shop.address %></h2>
                               </div>
 
@@ -181,8 +185,8 @@
                          </div>
                     </div>
 
-                    <div class="col-md-4 col-sm-4">
-                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-md-12 col-sm-12">
+                         <div class="team-thumb wow fadeInUp wechat-tumb" data-wow-delay="0.2s">
                             <%= link_to shop_wechat_path(@shop) do %>
                               <%= image_tag "wechat-contact.png", class: "img-responsive" %>
 
@@ -203,7 +207,7 @@
                          </div>
                     </div>
 
-                    <div class="col-md-4 col-sm-4">
+                    <!-- <div class="col-md-4 col-sm-4">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
                             <%= link_to shop_website_path(@shop) do %>
                               <%= image_tag "web-contact.png", class: "img-responsive web" %>
@@ -222,9 +226,9 @@
                               <h3><%= t(".contact-web") %></h3>
                               <p><%= t(".web-p") %></p>
                          </div>
-                    </div>
+                    </div> -->
 
-                    <div class="col-md-4 col-sm-4">
+                    <!-- <div class="col-md-4 col-sm-4">
                          <div class="team-thumb  wow fadeInUp" data-wow-delay="0.6s">
 
                           <%= link_to shop_instagram_path(@shop) do %>
@@ -245,7 +249,7 @@
                               <h3><%= t(".instagam")%></h3>
                               <p><%= t(".insta-p") %></p>
                          </div>
-                    </div>
+                    </div> -->
 
                </div>
           </div>
