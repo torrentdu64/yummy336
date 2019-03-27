@@ -30,4 +30,35 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  shared:
+    navbar:
+      home: "Home"
+      about: "About"
+      girls: "Girls"
+      contact: "Contact"
+      call: "Call Now! "
+      horny: "Horny Panic"
+
+    footer:
+      open: "Open Hours "
+      find: "Find us"
+      reservation: "Reservation"
+      pinky: "Pinky Girls"
+
+  shops:
+    show:
+      hours: "Open Hours"
+      paradise: "Come to paradise"
+      girls: "Girls"
+      girls-text: "They waiting you ..."
+      meet: "Meet Pinky Girls"
+      friendly: "We are nice &amp; friendly"
+      team-item-wechat: "Duis vel lacus id magna mattis vehicula"
+      contact-wechat: "Contact wechat"
+      moments: "see the moments"
+      team-item-website: "Cras suscipit neque quis odio feugiat"
+      contact-web: "Contact web"
+      web-p: "Owner &amp; Manager"
+      team-item-insta: "Etiam auctor enim tristique faucibus"
+      instagam: "Contact instagram"
+      insta-p: "Pizza Specialist"

@@ -1,4 +1,4 @@
-     <!-- MENU -->
+<!-- MENU -->
      <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
           <div class="container">
 
@@ -19,21 +19,21 @@
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
-                         <li><%= link_to "home", root_path %></li>
+                         <li><%= link_to t(".home"), root_path %></li>
                          <% if controller_name == 'shops' && action_name == 'show' %>
-                         <li><a href="#about" data-target=".in" class="smoothScroll">About</a></li>
+                         <li><a href="#about" data-target=".in" class="smoothScroll"><%= t(".about") %></a></li>
                          <% end %>
                          <!-- <li><a href="#team" data-target=".in" class="smoothScroll">Chef</a></li> -->
                          <!-- <li><a href="#menu"  data-target=".in" class="smoothScroll">Girls</a></li> -->
-                         <li><%= link_to "girls", shop_girls_path(@shop) %></li>
+                         <li><%= link_to t("girls"), shop_girls_path(@shop) %></li>
                          <% if controller_name == 'shops' && action_name == 'show' %>
-                         <li><a href="#team" data-target=".in" class="smoothScroll">Contact</a></li>
+                         <li><a href="#team" data-target=".in" class="smoothScroll"><%= t(".contact")%></a></li>
                          <% end %>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                         <li><a href="tel:+<%= @shop.phone %>">Call Now! <i class="fa fa-phone"></i> <%= @shop.phone %></a></li>
-                         <%= link_to "Horny Panic", shop_get_random_girl_path(@shop), class: "section-btn" %>
+                         <li><a href="tel:+<%= @shop.phone %>"><%= t(".call") %><i class="fa fa-phone"></i> <%= @shop.phone %></a></li>
+                         <%= link_to t(".horny"), shop_get_random_girl_path(@shop), class: "section-btn" %>
 
                     </ul>
                </div>
