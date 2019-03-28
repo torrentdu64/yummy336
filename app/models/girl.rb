@@ -15,4 +15,13 @@ class Girl < ApplicationRecord
   belongs_to :shop
 
   has_many :advertises
+
+  translates :name, :description, :age, :origin, :service, :size, :height, :bust, :hair
+
+
 end
+
+
+
+
+

@@ -23,6 +23,7 @@ gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 gem 'globalize', '~> 5.1.0'
+gem 'rails-i18n', '~> 5.1'
 
 
 group :development do
