@@ -1,29 +1,22 @@
 <!-- <div class="space-nav"></div> -->
-
 <!-- PRE LOADER -->
-     <section class="preloader">
-          <div class="spinner">
-
-               <span class="spinner-rotate"></span>
-
-          </div>
-     </section>
-
+<section class="preloader">
+  <div class="spinner">
+    <span class="spinner-rotate"></span>
+  </div>
+</section>
 <div class="container">
   <div class="row">
-     <div class="parallax" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path  'henry-co-568066-unsplash' %>);">
-
+    <div class="parallax" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path  'henry-co-568066-unsplash' %>);">
     </div>
     <div class="col-xs-12">
       <!-- <h1 class="text-center">Divine Girls</h1> -->
-      <h1 class="text-center" style="color:white;position:relative;bottom:200px;">Divine Girls</h1>
-        <p class="text-center">Choose you Candy</p>
+      <h1 class="text-center" style="color:white;position:relative;bottom:200px;"><%= t(".girls-title") %></h1>
+      <p class="text-center"><%= t(".candy") %></p>
     </div>
   </div>
-
   <div class="row space-cards">
-
-     <% @girls.each  do |girl| %>
+    <% @girls.each  do |girl| %>
     <div class="col-xs-12 col-sm-4 space-buttom-card">
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path girl.photo_one, width: 400, height: 200, crop: :fill %>);">
         <div class="card-category"><%= girl.name %></div>
@@ -31,24 +24,9 @@
           <h2><%= girl.age %></h2>
           <p><% girl %></p>
         </div>
-
         <%= link_to "", shop_girl_path(@shop, girl), class: "card-link" %>
       </div>
     </div>
-
     <% end %>
-
   </div>
-
-
-
 </div>
-
-
-
-
-
-
-
-
-

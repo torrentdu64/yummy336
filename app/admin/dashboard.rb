@@ -8,6 +8,17 @@ ActiveAdmin.register_page "Dashboard" do
         small I18n.t("active_admin.dashboard_welcome.call_to_action")
       end
     end
+    # columns do
+    #   column do
+    #     panel "Recent Posts" do
+    #       ul do
+    #         Girl.all do |girl|
+    #           li link_to(girl.name, admin_girl_path(girl))
+    #         end
+    #       end
+    #     end
+    #   end
+    # end
 
     # Here is an example of a simple dashboard with columns and panels.
     #
