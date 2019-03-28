@@ -28,7 +28,6 @@ form  girl: 'girl' do  |f|
     f.input :weight
     f.input :bust
     f.input :hair
-    f.input :phone
     actions
   end
 
@@ -88,7 +87,6 @@ index do
       row :weight
       row :bust
       row :hair
-      row :phone
       row :photo_one do |photo|
         image_tag photo.photo_one_url , size: "200x300" if photo.photo_one.present?
       end
