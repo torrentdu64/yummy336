@@ -6,7 +6,31 @@ ActiveAdmin.register Girl do
 
 
 
-
+form  girl: 'girl' do  |f|
+    f.input :name
+    f.input :description
+    f.input :age
+    f.input :photo_one
+    f.input :photo_two
+    f.input :photo_three
+    f.input :photo_four
+    f.input :photo_five
+    f.input :photo_six
+    f.input :photo_seven
+    f.input :photo_eight
+    f.input :photo_nine
+    f.input :photo_ten
+    f.input :origin
+    f.input :service
+    f.input :phone
+    f.input :size
+    f.input :height
+    f.input :weight
+    f.input :bust
+    f.input :hair
+    f.input :phone
+    actions
+  end
 
 
 
@@ -33,23 +57,71 @@ index do
       column :name
       column :description
       column :photo_one do |photo|
-        image_tag(photo.photo_one_url , size: "200x300")
+        image_tag(photo.photo_one_url , size: "200x300") if photo.photo_one.present?
       end
       actions
   end
 
-#   show do
+  show do
 
-#     attributes_table do
+    attributes_table do
 
-#       row "Index" do link_to " <==  back", admin_girls_path end
-#       row :name
-#       row :photo_one do |photo|
-#         image_tag photo.photo_one_url , size: "200x300"
-#       end
-#     end
+      row "Index" do link_to " <==  back", admin_girls_path end
+      row :name
+      row :description
+      row :age
+      row :photo_one
+      row :photo_two
+      row :photo_three
+      row :photo_four
+      row :photo_five
+      row :photo_six
+      row :photo_seven
+      row :photo_eight
+      row :photo_nine
+      row :photo_ten
+      row :origin
+      row :service
+      row :phone
+      row :size
+      row :height
+      row :weight
+      row :bust
+      row :hair
+      row :phone
+      row :photo_one do |photo|
+        image_tag photo.photo_one_url , size: "200x300" if photo.photo_one.present?
+      end
+      row :photo_two do |photo|
+        image_tag photo.photo_two_url , size: "200x300" if photo.photo_two.present?
+      end
+      row :photo_three do |photo|
+        image_tag photo.photo_three_url , size: "200x300" if photo.photo_three.present?
+      end
+      row :photo_four do |photo|
+        image_tag photo.photo_four_url , size: "200x300" if photo.photo_four.present?
+      end
+      row :photo_five do |photo|
+        image_tag photo.photo_five_url , size: "200x300" if photo.photo_five.present?
+      end
+      row :photo_six do |photo|
+        image_tag photo.photo_six_url , size: "200x300" if photo.photo_six.present?
+      end
+      row :photo_seven do |photo|
+        image_tag photo.photo_seven_url , size: "200x300" if photo.photo_seven.present?
+      end
+      row :photo_eight do |photo|
+        image_tag photo.photo_eight_url , size: "200x300" if photo.photo_eight.present?
+      end
+      row :photo_nine do |photo|
+        image_tag photo.photo_nine_url , size: "200x300" if photo.photo_nine.present?
+      end
+      row :photo_ten do |photo|
+        image_tag photo.photo_ten_url , size: "200x300" if photo.photo_ten.present?
+      end
+    end
 
-#  end
+ end
 
 
 end
