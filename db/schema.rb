@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190328014425) do
+ActiveRecord::Schema.define(version: 20190328030018) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,25 @@ ActiveRecord::Schema.define(version: 20190328014425) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["girl_id"], name: "index_advertises_on_girl_id"
+  end
+
+  create_table "girl_translations", force: :cascade do |t|
+    t.integer "girl_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.text "description"
+    t.string "age"
+    t.string "origin"
+    t.text "service"
+    t.string "size"
+    t.string "height"
+    t.string "weight"
+    t.string "bust"
+    t.string "hair"
+    t.index ["girl_id"], name: "index_girl_translations_on_girl_id"
+    t.index ["locale"], name: "index_girl_translations_on_locale"
   end
 
   create_table "girls", force: :cascade do |t|

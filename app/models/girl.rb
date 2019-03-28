@@ -16,7 +16,7 @@ class Girl < ApplicationRecord
 
   has_many :advertises
 
-  translates :name, :description, :age, :origin, :service, :size, :height, :bust, :hair
+  translates :name, :description, :age, :origin, :service, :size, :height, :weight, :bust, :hair
 
 
 end
