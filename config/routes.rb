@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
   devise_for :users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
+
     scope '(:locale)', locale: /ch|en/ do
+      ActiveAdmin.routes(self)
       resources :shops , only: :show, path: 'brothel' do
         get :get_random_girl
         resources :girls, only: [:index, :show] , path: 'escorts' do

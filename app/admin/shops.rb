@@ -55,10 +55,14 @@ end
 # end
 #
 
-  # form  shop: 'shop' do  |f|
-  #   f.input :title
-  #   f.input :description
-  # end
+  form  shop: 'shop' do  |f|
+    f.input :title
+    f.input :description
+    f.input :address
+    f.input :phone
+    f.input :photo_one
+    actions
+  end
 
   # form photo_one: 'photo' do |f|
   #    f.input :photo_one
