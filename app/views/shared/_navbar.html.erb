@@ -27,10 +27,14 @@
         <% else %>
         <li><%= link_to t(".girls"), shop_girls_path(@shop) %></li>
         <% end %>
+        <li><%= link_to_unless_current "English" , locale: "en" %></li>
+         <li><%= link_to_unless_current "中文" , locale: "ch"%></li>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="tel:+<%= @shop.phone %>"><%= t(".call") %><i class="fa fa-phone"></i> <%= @shop.phone %></a></li>
         <%= link_to t(".horny"), shop_get_random_girl_path(@shop), class: "section-btn" %>
+
       </ul>
     </div>
   </div>

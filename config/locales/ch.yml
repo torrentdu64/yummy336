@@ -1,0 +1,81 @@
+
+
+ch:
+  time:
+    formats:
+      long: "%Y-%m-%d %H:%M:%S"
+
+  shared:
+    navbar:
+      home: "中文"
+      about: "中文"
+      girls: "中文"
+      contact: "中文"
+      call: "中文 中文! "
+      horny: "中文 中文"
+
+    footer:
+      open: "中文 中文 "
+      find: "中文 中文"
+      reservation: "中文"
+      pinky: "中文 中文"
+      days: "中文 ~ 中文"
+      times: "中文 中文 ~ 中文 中文"
+
+  shops:
+    show:
+      hours: "中文 中文 "
+      days: "中文 ~ 中文"
+      times: "中文 中文 ~ 中文 中文"
+      paradise: "中文 中文 中文"
+      girls: "中文"
+      girls-text: "中文"
+      meet: "中文"
+      friendly: "中文"
+      team-item-wechat: "中文"
+      contact-wechat: "中文"
+      moments: "中文"
+      team-item-website: "中文"
+      contact-web: "中文"
+      web-p: "中文"
+      team-item-insta: "中文"
+      instagam: "中文"
+      insta-p: "中文"
+
+  girls:
+    index:
+      girls-title: "中文"
+      candy: "中文"
+
+    show:
+      prev: "中文"
+      next: "中文"
+      owl-1: "中文"
+      owl-2: "中文"
+      owl-3: "中文"
+      owl-4: "Your Perfect Breakfast"
+      owl-5: "The best dinning quality can be here too!"
+      owl-6: "Discover menu"
+      owl-7: "New Restaurant in Town"
+      owl-8: "Enjoy our special menus every Sunday and Friday"
+      owl-9: "Reservation"
+      title-show: "中文"
+      punch: "中文"
+      menu-1: "American Breakfast"
+      menu-2: "tomato / Eggs / Sausage"
+      menu-3: "$25"
+      menu-4: "Self-made Salad"
+      menu-5: "Green / Fruits / Healthy"
+      menu-6: "$18"
+      menu-7: "Chinese Noodle"
+      menu-8: "Pepper / Chicken / Vegetables"
+      menu-9: "$34"
+      menu-10: "Rice Soup"
+      menu-11: "Green / Chicken"
+      menu-12: "$28"
+      menu-13: "Deli Burger"
+      menu-14: "Beef / Fried Potatoes"
+      menu-15: "$46"
+      menu-16: "Big Flat Fried"
+      menu-17: "Pepper / Crispy"
+      menu-18: "$30"
