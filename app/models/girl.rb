@@ -18,6 +18,8 @@ class Girl < ApplicationRecord
 
   translates :name, :description, :age, :origin, :service, :size, :height, :weight, :bust, :hair
 
+  extend FriendlyId
+  friendly_id :slug, use: :slugged
 
 end
 

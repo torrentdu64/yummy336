@@ -24,6 +24,11 @@ module Yummy336
       generate.test_framework  :test_unit, fixture: false
     end
 
+    config.i18n.fallbacks = true
+
+    # If you're using I18n (>= 1.1.0) and Rails (< 5.2.2), this should be
+    #'config.i18n.fallbacks = [I18n.default_locale]'.
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 

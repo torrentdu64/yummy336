@@ -2,7 +2,7 @@ ActiveAdmin.register Shop do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :id ,:title, :description, :photo_one, :phone, :address, :slug
+permit_params :id ,:title, :description, :photo_one, :phone, :address, :slug, :user_id
 
 index do
   selectable_column
@@ -57,6 +57,8 @@ end
 #
 
   form  shop: 'shop' do  |f|
+    f.semantic_errors
+    f.input :user_id, :as => :select, :collection => User.all
     f.input :title
     f.input :slug
     f.input :description
@@ -65,6 +67,33 @@ end
     f.input :photo_one
     actions
   end
+
+  # controller do
+  #   def new
+  #     @girl = Shop.new
+  #     super
+  #   end
+
+  #   def create
+  #     @girl = Shop.new(params.require(:girl).permit(:id ,:title, :description, :photo_one, :phone, :address, :slug, :user_id))
+  #     super
+  #   end
+
+  #   def edit
+  #     @girl = Shop.find params[:id]
+  #     super
+  #   end
+
+  #   def show
+  #     @girl = Shop.find params[:id]
+  #     super
+  #   end
+
+  #   def update
+  #     @girl = Shop.find params[:id]
+  #     super
+  #   end
+  # end
 
   # form photo_one: 'photo' do |f|
   #    f.input :photo_one

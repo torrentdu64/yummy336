@@ -2,12 +2,15 @@ ActiveAdmin.register Girl do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-  permit_params :shop_id,:name,:description,:age,:photo_one,:photo_two,:photo_three,:photo_four,:photo_five,:photo_six,:photo_seven,:photo_eight,:photo_nine,:photo_ten,:origin,:service,:phone,:size,:height,:weight,:bust,:hair
+  permit_params :shop_id,:name,:description,:age,:photo_one,:photo_two,:photo_three,:photo_four,:photo_five,:photo_six,:photo_seven,:photo_eight,:photo_nine,:photo_ten,:origin,:service,:phone,:size,:height,:weight,:bust,:hair, :slug
 
 
 
 form  girl: 'girl' do  |f|
+    f.semantic_errors
+    f.input :shop_id, :as => :select, :collection => Shop.all
     f.input :name
+    f.input :slug
     f.input :description
     f.input :age
     f.input :photo_one

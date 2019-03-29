@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190329004612) do
+ActiveRecord::Schema.define(version: 20190329013128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -93,7 +93,9 @@ ActiveRecord::Schema.define(version: 20190329004612) do
     t.string "weight"
     t.string "bust"
     t.string "hair"
+    t.string "slug"
     t.index ["shop_id"], name: "index_girls_on_shop_id"
+    t.index ["slug"], name: "index_girls_on_slug"
   end
 
   create_table "hours", force: :cascade do |t|
