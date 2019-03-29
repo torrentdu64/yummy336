@@ -19,8 +19,16 @@ ActiveAdmin.setup do |config|
     admin.build_menu :utility_navigation do |menu|
       menu.add :label => "Languages" do |lang|
         lang.add :label => "English",:url => proc { url_for(:locale => 'en') }, id: 'i18n-en', :priority => 1
-        lang.add :label => "Chenise",:url => proc { url_for(:locale => 'ch') }, id: 'i18n-ch', :priority => 2
+        lang.add :label => "Chinese",:url => proc { url_for(:locale => 'ch') }, id: 'i18n-ch', :priority => 2
       end
+      # admin.build_menu do |menu|
+      #   menu.add :label => "My Custom Link", :url => "/", :priority => 0
+      # end
+      #   menu.add :label => "Pages" do |pages|
+      #     pages.add :label => "Homepage", :url => "/admin/shop/auckland/escort"
+      #     pages.add :label => "About Us", :url => "/admin/shop"
+      #     pages.add :label => "Facebook", :url => "http://www.facebook.com", :html_options => { :target => "_blank" }
+      # end
       menu.add :label => proc { display_name current_active_admin_user },
                 :url => '#',
                 :id => 'current_user',
@@ -28,6 +36,9 @@ ActiveAdmin.setup do |config|
       admin.add_logout_button_to_menu menu
     end
   end
+
+
+
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.

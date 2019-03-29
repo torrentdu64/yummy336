@@ -1,15 +1,15 @@
 GIT
   remote: git://github.com/activeadmin/activeadmin.git
-  revision: d95a9a853fd455c1fd776b569dd25e950fa8a533
+  revision: 475d2ad9bbbff247027ea0f1ebc0bc511d672e54
   specs:
-    activeadmin (2.0.0.alpha)
+    activeadmin (2.0.0.rc1)
       arbre (~> 1.1, >= 1.1.1)
       formtastic (~> 3.1)
       formtastic_i18n (~> 0.4)
       inherited_resources (~> 1.7)
       jquery-rails (~> 4.2)
       kaminari (~> 1.0, >= 1.0.1)
-      railties (>= 5.0, < 5.3)
+      railties (>= 5.0, < 6.0)
       ransack (~> 2.1, >= 2.1.1)
       sass (~> 3.4)
       sprockets (>= 3.0, < 4.1)
@@ -17,13 +17,13 @@ GIT
 
 GIT
   remote: git://github.com/activeadmin/inherited_resources.git
-  revision: 7f86f6044e050350188a85e00543929afbcd1652
+  revision: ef943a6b6d5d0fdb5ea29adbcfada8b576a79d9b
   specs:
-    inherited_resources (1.9.0)
-      actionpack (>= 5.0, < 5.3)
+    inherited_resources (1.10.0.rc1)
+      actionpack (>= 5.0, < 6.0)
       has_scope (~> 0.6)
-      railties (>= 5.0, < 5.3)
-      responders
+      railties (>= 5.0, < 6.0)
+      responders (~> 2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -90,7 +90,7 @@ GEM
       aws_cf_signer
       rest-client
     coderay (1.1.2)
-    concurrent-ruby (1.1.4)
+    concurrent-ruby (1.1.5)
     crass (1.0.4)
     devise (4.6.0)
       bcrypt (~> 3.0)
@@ -112,6 +112,8 @@ GEM
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
+    friendly_id (5.2.5)
+      activerecord (>= 4.0.0)
     geocoder (1.5.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -124,7 +126,7 @@ GEM
       activesupport (>= 4.1)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    i18n (1.5.3)
+    i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
@@ -163,7 +165,7 @@ GEM
     multi_json (1.13.1)
     netrc (0.11.0)
     nio4r (2.3.1)
-    nokogiri (1.10.1)
+    nokogiri (1.10.2)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     pg (0.21.0)
@@ -296,6 +298,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-sass (~> 5.5.0)
+  friendly_id (~> 5.2.4)
   geocoder
   globalize (~> 5.1.0)
   inherited_resources!

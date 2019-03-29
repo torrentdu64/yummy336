@@ -45,17 +45,17 @@ class GirlsController < ApplicationController
   private
 
   def id_params
-   @girl = Girl.find(params[:girl_id])
+   @girl = Girl.friendly.find(params[:girl_id])
   end
 
 
 
   def find_girl
-    @girl = Girl.find(params[:id])
+    @girl = Girl.friendly.find(params[:id])
   end
 
   def set_pinky
-   @shop =  Shop.find(params[:shop_id])
+   @shop =  Shop.friendly.find(params[:shop_id])
   end
 
 
