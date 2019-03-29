@@ -2,11 +2,12 @@ ActiveAdmin.register Shop do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :id ,:title, :description, :photo_one, :phone, :address
+permit_params :id ,:title, :description, :photo_one, :phone, :address, :slug
 
 index do
   selectable_column
   column :id
+  column :slug
   column :title
   column :description
   column :address
@@ -57,6 +58,7 @@ end
 
   form  shop: 'shop' do  |f|
     f.input :title
+    f.input :slug
     f.input :description
     f.input :address
     f.input :phone

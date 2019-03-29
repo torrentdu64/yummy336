@@ -55,7 +55,7 @@ class GirlsController < ApplicationController
   end
 
   def set_pinky
-   @shop =  Shop.find(params[:shop_id])
+   @shop =  Shop.friendly.find(params[:shop_id])
   end
 
 

@@ -31,7 +31,7 @@ class ShopsController < ApplicationController
 
   def find_pinky
     # slug name for the shop
-    @shop =  Shop.find_by( title: "Pinky Girls")
+    @shop =  Shop.friendly.find_by( title: "Pinky Girls")
   end
 
 
