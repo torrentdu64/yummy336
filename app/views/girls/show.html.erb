@@ -1,3 +1,6 @@
+<% content_for :meta_title, "#{@girl.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @girl.description %>
+<% content_for :meta_image, cl_image_path(@girl.photo_one.path) %>
 <!-- PRE LOADER -->
 <section class="preloader">
   <div class="spinner">
