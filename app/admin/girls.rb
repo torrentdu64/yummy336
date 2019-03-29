@@ -5,32 +5,59 @@ ActiveAdmin.register Girl do
   permit_params :shop_id,:name,:description,:age,:photo_one,:photo_two,:photo_three,:photo_four,:photo_five,:photo_six,:photo_seven,:photo_eight,:photo_nine,:photo_ten,:origin,:service,:phone,:size,:height,:weight,:bust,:hair, :slug
 
 
+  form girl: 'girl' do  |f|
+  f.inputs 'messages' do
+     f.semantic_errors
+    end
+  f.inputs 'Organization Settings' do
+     f.input :shop_id, :as => :select, :collection => Shop.all
+    end
+  f.inputs 'Organization Settings' do
+     f.input :name
+     f.input :slug
+     f.input :description
+     f.input :age
+     f.input :origin
+     f.input :service
+     f.input :phone
+     f.input :size
+     f.input :height
+     f.input :weight
+     f.input :bust
+     f.input :hair
+  end
+  f.inputs 'Organization Settings' do
+     f.input :photo_one
+  end
+  f.inputs 'Organization Settings' do
+     f.input :photo_two
+  end
+  f.inputs 'Organization Settings' do
+     f.input :photo_three
+  end
+  f.inputs 'Organization Settings' do
+     f.input :photo_four
+  end
+  f.inputs 'Organization Settings' do
+     f.input :photo_five
+  end
+  f.inputs 'Organization Settings' do
+     f.input :photo_six
+  end
+  f.inputs 'Organization Settings' do
+     f.input :photo_seven
+  end
+  f.inputs 'Organization Settings' do
+     f.input :photo_eight
+  end
+  f.inputs 'Organization Settings' do
+     f.input :photo_nine
+  end
+  f.inputs 'Organization Settings' do
+     f.input :photo_ten
+  end
 
-form  girl: 'girl' do  |f|
-    f.semantic_errors
-    f.input :shop_id, :as => :select, :collection => Shop.all
-    f.input :name
-    f.input :slug
-    f.input :description
-    f.input :age
-    f.input :photo_one
-    f.input :photo_two
-    f.input :photo_three
-    f.input :photo_four
-    f.input :photo_five
-    f.input :photo_six
-    f.input :photo_seven
-    f.input :photo_eight
-    f.input :photo_nine
-    f.input :photo_ten
-    f.input :origin
-    f.input :service
-    f.input :phone
-    f.input :size
-    f.input :height
-    f.input :weight
-    f.input :bust
-    f.input :hair
+
     actions
   end
 

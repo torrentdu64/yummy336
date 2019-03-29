@@ -57,14 +57,21 @@ end
 #
 
   form  shop: 'shop' do  |f|
-    f.semantic_errors
-    f.input :user_id, :as => :select, :collection => User.all
-    f.input :title
-    f.input :slug
-    f.input :description
-    f.input :address
-    f.input :phone
-    f.input :photo_one
+    f.inputs 'Messages' do
+      ul
+        li f.semantic_errors
+    end
+    f.inputs 'setting info' do
+      f.input :user_id, :as => :select, :collection => User.all
+      f.input :title
+      f.input :slug
+      f.input :description
+      f.input :address
+      f.input :phone
+    end
+    f.inputs 'photo' do
+      f.input :photo_one
+    end
     actions
   end
 
