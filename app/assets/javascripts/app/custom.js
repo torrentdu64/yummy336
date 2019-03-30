@@ -41,9 +41,12 @@
 
     // MAGNIFIC POPUP
     $('.image-popup').magnificPopup({
+
         type: 'image',
         removalDelay: 300,
         mainClass: 'mfp-with-zoom',
+        pauseOnHover: true,
+        fixedContentPos: false,
         gallery:{
           enabled:true
         },
@@ -57,12 +60,43 @@
         // and to which popup will be scaled down
         // By defailt it looks for an image tag:
         opener: function(openerElement) {
+
         // openerElement is the element on which popup was initialized, in this case its <a> tag
         // you don't need to add "opener" option if this code matches your needs, it's defailt one.
         return openerElement.is('img') ? openerElement : openerElement.find('img');
         }
       }
     });
+
+    $(document).on("click", ".img-responsive", function(){
+       setInterval( next , 2000);
+    });
+
+    function next(){
+      $.magnificPopup.instance.next();
+    }
+
+
+    // setInterval(function() {
+    //    $('.mfp-arrow .mfp-arrow-right').click();
+    // }, 1000);
+
+
+
+    // function next_slide(){
+    //   console.log("set");
+
+    // }
+
+
+
+    // $('.mfp-arrow-right').click();
+
+    // window.onload = function() {
+    //     setTimeout(function() {
+    //       document.getElementByClassName('mfp-arrow-right').click();
+    //     }, 100);
+    //   };
 
 /*
     // CONTACT FORM
