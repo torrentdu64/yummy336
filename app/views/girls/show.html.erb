@@ -120,13 +120,15 @@ window.location = `https://maps.google.fr/maps?saddr=${addr}&daddr=${lat},${long
       </div>
       <div class="col-xs-12 col-md-5 col-sm-4" id="profile">
         <p><%= @girl.description %></p>
-        <p><%= @girl.origin %></p>
-        <p><%= @girl.service %></p>
-        <p><%= @girl.size %></p>
-        <p><%= @girl.height  %></p>
-        <p> <%= @girl.weight %></p>
-        <p> <%= @girl.bust %></p>
-        <p> <%= @girl.hair %></p>
+        <p><%= t(".origin") if @girl.origin.present? %> <%= @girl.origin %></p>
+        <p><%= t(".service") if @girl.service.present? %> <%= @girl.service %></p>
+        <p><%= t(".size") if @girl.size.present? %> <%= @girl.size %></p>
+        <p><%= t(".height") if  @girl.height.present? %> <%= @girl.height  %></p>
+        <p><%= t(".weight") if @girl.weight.present? %> <%= @girl.weight %></p>
+        <p><%= t(".bust") if @girl.bust.present? %> <%= @girl.bust %></p>
+        <p><%= t(".hair") if  @girl.hair.present?%> <%= @girl.hair %></p>
+
+
       </div>
       <div class="max">
         <% if @girl.photo_four.present? %>

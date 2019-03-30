@@ -104,6 +104,26 @@ en:
       menu-16: "Big Flat Fried"
       menu-17: "Pepper / Crispy"
       menu-18: "$30"
+      origin: "Origin :"
+      service: "Services :"
+      size: "Size: "
+      height: "Height :"
+      weight: "Weight :"
+      bust: "Bust :"
+      hair: "Hair :"
+
+  advertises:
+    index:
+      table-name: "Pinky Price"
+      table-hour: "Hours"
+      money: "Cash"
+      time-1: "30 minutes"
+      time-2: "1 hour"
+      time-3: "outcall"
+      cash-1: "$180"
+      cash-2: "$260"
+      cash-3: "$380"
+
 
 
 

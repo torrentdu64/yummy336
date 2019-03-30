@@ -1,11 +1,34 @@
-<h1>Advertises#index</h1>
-<p>Find me in app/views/advertises/index.html.erb</p>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-12">
+    <div class="col-xs-12 col-md-offset-2 col-md-10">
       <h1> </h1>
-    <!-- find exemple on  -->
-    price: table
+      <div class="aa_htmlTable">
+        <h2 class="aa_h2"><%= t(".table-name") %></h2>
+        <table>
+          <thead>
+            <tr>
+              <th><%= t(".table-hour") %></th>
+              <th><%= t(".money")%></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= t(".time-1") %></td>
+              <td><%= t(".cash-1") %></td>
+            </tr>
+            <tr>
+              <td><%= t(".time-2") %></td>
+              <td><%= t(".cash-2") %></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td><%= t(".time-3") %></td>
+              <td><%= t(".cash-3") %></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
     </div>
   </div>
 </div>

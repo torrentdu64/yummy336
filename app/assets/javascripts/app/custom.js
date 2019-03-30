@@ -69,11 +69,15 @@
     });
 
     $(document).on("click", ".img-responsive", function(){
-       setInterval( next , 2000);
+        setInterval( next , 3000);
     });
 
     function next(){
-      $.magnificPopup.instance.next();
+      $(".mfp-content").slideUp("slow", function() {
+        $.magnificPopup.instance.next();
+      })
+
+      $(".mfp-content").slideDown("slow");
     }
 
 
