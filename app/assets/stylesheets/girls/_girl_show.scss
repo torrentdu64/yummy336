@@ -65,11 +65,49 @@
   // }
 
 
-
-
-
-
 }
+
+    // Iphone X
+  @media only screen
+  and (min-device-width : 375px)
+  and (max-device-width : 812px)
+  and (-webkit-device-pixel-ratio : 3)
+  and (orientation : portrait) {
+
+        .wave-girl {
+            min-width: 450px !important;
+        }
+
+  }
+
+  // iPhone 6, 7, & 8 in portrait
+  @media only screen
+  and (min-device-width : 375px)
+  and (max-device-width : 667px)
+  and (orientation : portrait) {
+  /* STYLES GO HERE */
+  .wave-girl {
+    position: absolute;
+    top: 380px !important;
+    z-index: 100;
+    min-width: 448px !important;
+    }
+
+  }
+
+  // iPhone 6, 7, & 8 Plus in portrait
+  @media only screen
+  and (min-device-width : 414px)
+  and (max-device-width : 736px)
+  and (orientation : portrait) {
+    /* STYLES GO HERE */
+    .wave-girl {
+      min-width: 487px !important;
+    }
+  }
+
+
+
 
 .up-component{
   z-index: 150;
@@ -79,6 +117,8 @@
     top: 420px;
     z-index: 100;
   }
+
+
 
 @media (min-width: 768px) {
 
