@@ -11,9 +11,11 @@ Rails.application.routes.draw do
           get :prev
         end
         #resources :advertises, only: [:wechat]
+        get 'job', to: 'advertises#job', :as => :job
         get 'wechat', to: 'advertises#wechat' , :as => :wechat
         get 'website', to: 'advertises#website', :as => :website
         get 'instagram', to: 'advertises#instagram', :as => :instagram
+
       end
 
 
@@ -33,5 +35,9 @@ Rails.application.routes.draw do
       root to: 'shops#show'
 
     end
+      match "/404", to: "errors#not_found", via: :all
+      match "/422", to: "errors#unacceptable", via: :all
+      match "/500", to: "errors#internal_server_error", via: :all
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
