@@ -25,6 +25,7 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'globalize', '~> 5.1.0'
 gem 'rails-i18n', '~> 5.1'
 gem 'friendly_id', '~> 5.2.4'
+gem "breadcrumbs_on_rails"
 
 
 group :development do
