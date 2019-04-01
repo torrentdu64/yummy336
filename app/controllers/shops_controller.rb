@@ -4,6 +4,8 @@ class ShopsController < ApplicationController
 
    before_action :find_pinky, only: [ :show, :get_random_girl ]
 
+   add_breadcrumb "Brothel", :shops_path
+
   def show
     @shops = Shop.where.not(latitude: nil, longitude: nil)
 
@@ -14,7 +16,7 @@ class ShopsController < ApplicationController
         infoWindow: render_to_string(partial: "/shops/map_info", locals: { shop: shop })
       }
     end
-
+    add_breadcrumb @shop, shop_path(@shop)
   end
 
   def get_random_girl
