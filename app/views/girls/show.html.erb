@@ -252,3 +252,27 @@ window.location = `https://maps.google.fr/maps?saddr=${addr}&daddr=${lat},${long
 </div>
 </section>
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://google.com/article"
+  },
+  "headline": "<%= @girl.name %>",
+  "image": {
+    "@type": "ImageObject",
+    <% if @girl.photo_one.present? %>
+    "url": "<%= cl_image_path @girl.photo_one %>",
+    <% end %>
+    "height": 500,
+    "width": 700
+  }
+}
+</script>
+
+<%# elsif @post.videothumb.present? %>
+<!-- "url": "<%= @post.videothumb %>", -->
+<%# else %>

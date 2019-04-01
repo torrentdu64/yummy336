@@ -21,6 +21,8 @@ class Girl < ApplicationRecord
   extend FriendlyId
   friendly_id :slug, use: :slugged
 
+  # html_schema_type :BlogPosting
+
 end
 
 
