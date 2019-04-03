@@ -21,6 +21,46 @@
     <meta name="twitter:description" content="<%= meta_description %>">
     <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:image:src" content="<%= meta_image %>">
+
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "NightClub",
+        "image": [
+          "https://www.pinkygirls.co.nz/assets/pinkygirls-db2aaf4566d9a7dc2d0c8c2859e9043d0414ad2c60f16463ebbf2c56495855bc.png"
+         ],
+        "@id": "https://www.pinkygirls.co.nz/",
+        "name": "Pinky Girls",
+        "description": "Best Brothel in Auckland many gorgeous escorts available .",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "336 New North Rd",
+          "addressLocality": "Auckland",
+          "addressRegion": "Kingsland",
+          "postalCode": "1021",
+          "addressCountry": "NZ"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.8690526,
+          "longitude": 174.7507902
+        },
+        "url": "https://www.pinkygirls.co.nz/",
+        "telephone": "+0211255871",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Sunday"
+            ],
+            "opens": "12:00",
+            "closes": "06:00"
+          }]
+        },
+      }
+    </script>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -31,23 +71,7 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
-    <%= render 'shared/footer' %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
-    <%= javascript_include_tag 'app/jquery.js' %>
-    <%= javascript_include_tag 'app/jquery.magnific-popup.min.js' %>
-    <%= javascript_include_tag 'app/jquery.stellar.min.js' %>
-    <%= javascript_include_tag 'app/bootstrap.min.js' %>
-    <%= javascript_include_tag 'app/owl.carousel.min.js' %>
-
-    <%= javascript_include_tag 'app/smoothscroll.js' %>
-    <%= javascript_include_tag 'app/wow.min.js' %>
-    <%= javascript_include_tag 'app/custom.js' %>
-    <%= javascript_pack_tag 'map' %>
-    <script type="application/ld+json">
+     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -79,44 +103,23 @@
       }]
     }
     </script>
+    <%= render 'shared/navbar' %>
+    <%= render 'shared/flashes' %>
+    <%= yield %>
+    <%= render 'shared/footer' %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+    <%= javascript_include_tag 'app/jquery.js' %>
+    <%= javascript_include_tag 'app/jquery.magnific-popup.min.js' %>
+    <%= javascript_include_tag 'app/jquery.stellar.min.js' %>
+    <%= javascript_include_tag 'app/bootstrap.min.js' %>
+    <%= javascript_include_tag 'app/owl.carousel.min.js' %>
 
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NightClub",
-  "image": [
-    "https://www.pinkygirls.co.nz/assets/pinkygirls-db2aaf4566d9a7dc2d0c8c2859e9043d0414ad2c60f16463ebbf2c56495855bc.png"
-   ],
-  "@id": "https://www.pinkygirls.co.nz/",
-  "name": "Pinky Girls",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "336 New North Rd",
-    "addressLocality": "Auckland",
-    "addressRegion": "Kingsland",
-    "postalCode": "1021",
-    "addressCountry": "NZ"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -36.8690526,
-    "longitude": 174.7507902
-  },
-  "url": "https://www.pinkygirls.co.nz/",
-  "telephone": "+0211255871",
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Sunday"
-      ],
-      "opens": "12:00",
-      "closes": "06:00"
-    }]
-  },
-}
-</script>
+    <%= javascript_include_tag 'app/smoothscroll.js' %>
+    <%= javascript_include_tag 'app/wow.min.js' %>
+    <%= javascript_include_tag 'app/custom.js' %>
+    <%= javascript_pack_tag 'map' %>
+
 
   </body>
 </html>
