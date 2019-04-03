@@ -36,7 +36,15 @@ Rails.application.routes.draw do
 
       root to: 'shops#show'
 
+
     end
+
+    constraints(host: /^(?!www\.)/i) do
+      get '(*any)' => redirect { |params, request|
+        URI.parse(request.url).tap { |uri| uri.host = "www.#{uri.host}" }.to_s
+      }
+    end
+
       match "/404", to: "errors#not_found", via: :all
       match "/422", to: "errors#unacceptable", via: :all
       match "/500", to: "errors#internal_server_error", via: :all
