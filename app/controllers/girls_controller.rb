@@ -30,6 +30,7 @@ class GirlsController < ApplicationController
     else
       redirect_to shop_girl_path( @shop ,@girl)
     end
+    raise
   end
 
   def prev
@@ -41,6 +42,7 @@ class GirlsController < ApplicationController
     else
       redirect_to shop_girl_path( @shop ,@girl)
     end
+    raise
   end
 
   private
