@@ -4,6 +4,14 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
   before_action :default_url
 
+  before_action :redirect_subdomain
+
+  def redirect_subdomain
+    if request.host == 'www.pinkygirls.co.nz'
+      redirect_to 'http://pinkygirls.co.nz' + request.fullpath, :status => 301
+    end
+  end
+
   private
 
   def set_locale
