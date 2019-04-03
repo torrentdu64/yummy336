@@ -39,10 +39,16 @@ Rails.application.routes.draw do
 
     end
 
-    constraints(host: /^(?!www\.)/i) do
-      get '(*any)' => redirect { |params, request|
-        URI.parse(request.url).tap { |uri| uri.host = "www.#{uri.host}" }.to_s
+    constraints(host: /^www\.(?!pinkygirls\.)/i) do
+
+      match '(*any)', via: :all, to: redirect { |params, request|
+
+        # parse the current request url
+        # tap in and remove www.
+        URI.parse(request.url).tap { |uri| uri.host.sub!(/^www\./i, '') }.to_s
+
       }
+
     end
 
       match "/404", to: "errors#not_found", via: :all
