@@ -18,6 +18,7 @@ class GirlsController < ApplicationController
     #     infoWindow: render_to_string(partial: "/shops/map_info", locals: { shop: shop })
     #   }
     # end
+
   end
 
   def next
@@ -25,7 +26,7 @@ class GirlsController < ApplicationController
 
     if @girl == nil
       id_params
-      render :show
+      redirect_to shop_girl_path( @shop ,@girl)
     else
       redirect_to shop_girl_path( @shop ,@girl)
     end
@@ -36,7 +37,7 @@ class GirlsController < ApplicationController
 
     if @girl == nil
       id_params
-      render :show
+      redirect_to shop_girl_path( @shop ,@girl)
     else
       redirect_to shop_girl_path( @shop ,@girl)
     end

@@ -9,7 +9,7 @@
 </section>
 <section id="home" class="slider" data-stellar-background-ratio="0.5">
   <div class="owl-carousel owl-theme">
-    <div class="item " style="background-image:url(<%= cl_image_path @girl.photo_one, width: 400 %>);">
+    <div class="item " style="background-image:url(<%= cl_image_path @girl.photo_one, width: 400, :effect=>'blur_faces' %>);">
       <div class="caption">
         <div class="container">
           <div class="col-md-8 col-sm-12">
@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    <div class="item "  style="background-image:url(<%= cl_image_path @girl.photo_two ,gravity: :face%>);">
+    <div class="item "  style="background-image:url(<%= cl_image_path @girl.photo_two ,gravity: :face , :effect=>'blur_faces' %>);">
       <div class="caption">
         <div class="container">
           <div class="col-md-8 col-sm-12">
@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <div class="item " style="background-image:url(<%= cl_image_path @girl.photo_three, gravity: :face %>);">
+    <div class="item " style="background-image:url(<%= cl_image_path @girl.photo_three, gravity: :face, :effect=>'blur_faces' %>);">
       <div class="caption">
         <div class="container">
           <div class="col-md-8 col-sm-12">
@@ -108,6 +108,11 @@ window.location = `https://maps.google.fr/maps?saddr=${addr}&daddr=${lat},${long
     <%= link_to  t(".next"), shop_girl_next_path(@shop, @girl), class: "btn btn-success  " %>
   </div>
 </div>
+<div class="row">
+  <div class="col-xs-offset-5 col-xs-12 col-md-1 col-md-offset-5 up-component">
+    <%= link_to t(".girls"), shop_girls_path(@shop), class: "btn btn-primary " %>
+  </div>
+</div>
 <section id="menu" data-stellar-background-ratio="0.5">
   <div class="main-container">
     <div class="row mobile-size">
@@ -135,8 +140,8 @@ window.location = `https://maps.google.fr/maps?saddr=${addr}&daddr=${lat},${long
         <div class="col-md-4 col-sm-6 ">
           <!-- MENU THUMB -->
           <div class="menu-thumb">
-            <a href='<%= cl_image_path @girl.photo_four %>'class="image-popup" title="American Breakfast">
-              <%= cl_image_tag @girl.photo_four , class: "img-responsive", width: 500, height: 600, crop: :fill %>
+            <a href='<%= cl_image_path @girl.photo_four, :effect=>'blur_faces' %>'class="image-popup" title="American Breakfast">
+              <%= cl_image_tag @girl.photo_four, :effect=>"blur_faces" , class: "img-responsive", width: 500, height: 600, crop: :fill %>
               <div class="menu-info">
                 <div class="menu-item">
                   <h3><%= t(".menu-1") %></h3>
@@ -154,8 +159,8 @@ window.location = `https://maps.google.fr/maps?saddr=${addr}&daddr=${lat},${long
         <div class="col-md-4 col-sm-6">
           <!-- MENU THUMB -->
           <div class="menu-thumb">
-            <a href='<%= cl_image_path @girl.photo_five %>' class="image-popup" title="Self-made Salad">
-              <%= cl_image_tag @girl.photo_five, class: "img-responsive", width: 500, height: 600, crop: :fill %>
+            <a href='<%= cl_image_path @girl.photo_five, :effect=>'blur_faces' %>' class="image-popup" title="Self-made Salad">
+              <%= cl_image_tag @girl.photo_five, :effect=>"blur_faces", class: "img-responsive", width: 500, height: 600, crop: :fill %>
               <div class="menu-info">
                 <div class="menu-item">
                   <h3><%= t(".menu-4") %></h3>
@@ -173,8 +178,8 @@ window.location = `https://maps.google.fr/maps?saddr=${addr}&daddr=${lat},${long
         <div class="col-md-4 col-sm-6">
           <!-- MENU THUMB -->
           <div class="menu-thumb">
-            <a href='<%= cl_image_path @girl.photo_six %>' class="image-popup" title="Chinese Noodle">
-              <%= cl_image_tag @girl.photo_six, class: "img-responsive", width: 500, height: 600, crop: :fill %>
+            <a href='<%= cl_image_path @girl.photo_six, :effect=>'blur_faces' %>' class="image-popup" title="Chinese Noodle">
+              <%= cl_image_tag @girl.photo_six, :effect=>"blur_faces", class: "img-responsive", width: 500, height: 600, crop: :fill %>
               <div class="menu-info">
                 <div class="menu-item">
                   <h3><%= t(".menu-7") %></h3>
@@ -192,8 +197,8 @@ window.location = `https://maps.google.fr/maps?saddr=${addr}&daddr=${lat},${long
         <div class="col-md-4 col-sm-6">
           <!-- MENU THUMB -->
           <div class="menu-thumb">
-            <a href='<%= cl_image_path @girl.photo_seven %>' class="image-popup" title="Rice Soup">
-              <%= cl_image_tag @girl.photo_seven, class: "img-responsive", width: 500, height: 600, crop: :fill  %>
+            <a href='<%= cl_image_path @girl.photo_seven, :effect=>'blur_faces' %>' class="image-popup" title="Rice Soup">
+              <%= cl_image_tag @girl.photo_seven, :effect=>"blur_faces", class: "img-responsive", width: 500, height: 600, crop: :fill  %>
               <div class="menu-info">
                 <div class="menu-item">
                   <h3><%= t(".menu-10") %></h3>
@@ -211,8 +216,8 @@ window.location = `https://maps.google.fr/maps?saddr=${addr}&daddr=${lat},${long
         <div class="col-md-4 col-sm-6" style="margin-left: 350px;">
           <!-- MENU THUMB -->
           <div class="menu-thumb">
-            <a href='<%=  cl_image_path @girl.photo_eight  %>' class="image-popup" title="Project title">
-              <%= cl_image_tag @girl.photo_eight, class: "img-responsive", width: 500, height: 600, crop: :fill %>
+            <a href='<%=  cl_image_path @girl.photo_eight, :effect=>'blur_faces' %>' class="image-popup" title="Project title">
+              <%= cl_image_tag @girl.photo_eight, :effect=>"blur_faces", class: "img-responsive", width: 500, height: 600, crop: :fill %>
               <div class="menu-info">
                 <div class="menu-item">
                   <h3><%= t(".menu-13") %></h3>
@@ -230,8 +235,8 @@ window.location = `https://maps.google.fr/maps?saddr=${addr}&daddr=${lat},${long
         <div class="col-md-4 col-sm-6 " >
           <!-- MENU THUMB -->
           <div class="menu-thumb">
-            <a href='<%= cl_image_path @girl.photo_nine %>'class="image-popup" title="Project title">
-              <%= cl_image_tag @girl.photo_nine, class: "img-responsive", width: 500, height: 600, crop: :fill %>
+            <a href='<%= cl_image_path @girl.photo_nine, :effect=>'blur_faces' %>'class="image-popup" title="Project title">
+              <%= cl_image_tag @girl.photo_nine, :effect=>"blur_faces", class: "img-responsive", width: 500, height: 600, crop: :fill %>
               <div class="menu-info">
                 <div class="menu-item">
                   <h3><%= t(".menu-16") %></h3>

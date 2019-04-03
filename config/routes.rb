@@ -7,8 +7,8 @@ Rails.application.routes.draw do
       resources :shops , only: :show, path: 'brothel' do
         get :get_random_girl
         resources :girls, only: [:index, :show] , path: 'escorts' do
-          get :next , path: ''
-          get :prev , path: ''
+          get :next , path: 'next'
+          get :prev , path: 'prev'
         end
         #resources :advertises, only: [:wechat]
         get 'job', to: 'advertises#job', :as => :job
@@ -39,17 +39,17 @@ Rails.application.routes.draw do
 
     end
 
-    constraints(host: /^www\.(?!pinkygirls\.)/i) do
+    # constraints(host: /^www\.(?!pinkygirls\.)/i) do
 
-      match '(*any)', via: :all, to: redirect { |params, request|
+    #   match '(*any)', via: :all, to: redirect { |params, request|
 
-        # parse the current request url
-        # tap in and remove www.
-        URI.parse(request.url).tap { |uri| uri.host.sub!(/^www\./i, '') }.to_s
+    #     # parse the current request url
+    #     # tap in and remove www.
+    #     URI.parse(request.url).tap { |uri| uri.host.sub!(/^www\./i, '') }.to_s
 
-      }
+    #   }
 
-    end
+    # end
 
       match "/404", to: "errors#not_found", via: :all
       match "/422", to: "errors#unacceptable", via: :all
