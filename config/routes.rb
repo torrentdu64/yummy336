@@ -55,7 +55,7 @@ Rails.application.routes.draw do
       match "/422", to: "errors#unacceptable", via: :all
       match "/500", to: "errors#internal_server_error", via: :all
 
-      get '/brothel/:slug/escort/:slug', to: redirect('/brothel/%{:slug}/escort/%{:slug}', status: 301)
+      #get '/brothel/:slug/escort/:slug', to: redirect('/brothel/%{:slug}/escort/%{:slug}', status: 301)
 
       # match '*_path' => redirect('/', status: 301) , via: :all
       # # 301 redirect from old URLs
