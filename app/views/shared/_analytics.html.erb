@@ -1,9 +1,12 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=#{ENV['ENV['google_analytics_key']']}"></script>
+<<<<<<< HEAD
+<script async src="https://www.googletagmanager.com/gtag/js?id=<%= ENV['google_analytics_key'] %>"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', ENV['google_analytics_key']);
+
+  gtag('config', <%= ENV['google_analytics_key'] %>);
 </script>
