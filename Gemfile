@@ -26,6 +26,7 @@ gem 'globalize', '~> 5.1.0'
 gem 'rails-i18n', '~> 5.1'
 gem 'friendly_id', '~> 5.2.4'
 gem 'sitemap_generator'
+gem "figaro"
 
 group :development do
   gem 'web-console', '>= 3.3.0'
