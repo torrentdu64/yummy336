@@ -15,6 +15,11 @@ class ShopsController < ApplicationController
       }
     end
 
+    respond_to do |format|
+      format.html.amp
+      format.html.none
+    end
+
   end
 
   def get_random_girl
