@@ -26,6 +26,8 @@ module Yummy336
 
     config.i18n.fallbacks = true
 
+    config.assets.precompile << 'amp/application.scss'
+
     # If you're using I18n (>= 1.1.0) and Rails (< 5.2.2), this should be
     #'config.i18n.fallbacks = [I18n.default_locale]'.
 
