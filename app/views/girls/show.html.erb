@@ -213,7 +213,8 @@ window.location = `https://maps.google.fr/maps?saddr=${addr}&daddr=${lat},${long
         </div>
         <% end %>
         <% if @girl.photo_eight.present? %>
-        <div class="col-md-4 col-sm-6" style="margin-left: 350px;">
+        <!-- style="margin-left: 350px;" -->
+        <div class="col-md-4 col-sm-6" >
           <!-- MENU THUMB -->
           <div class="menu-thumb">
             <a href='<%=  cl_image_path @girl.photo_eight, :effect=>'blur_faces' %>' class="image-popup" title="Project title">
