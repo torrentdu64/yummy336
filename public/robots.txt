@@ -1,13 +1,13 @@
 # See http://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
 
 
-User-agent: *
-Disallow: /admin # This is an infinite virtual URL space
-Disallow: /tmp/ # these will soon disappear
-Disallow: /admin/login
-Disallow: /admin/dashboard
-Disallow: /admin/advertises
-Disallow: /admin/comments
-Disallow: /admin/girls
-Disallow: /admin/hours
-Disallow: /admin/shops
+# User-agent: *
+# Disallow: /admin # This is an infinite virtual URL space
+# Disallow: /tmp/ # these will soon disappear
+# Disallow: /admin/login
+# Disallow: /admin/dashboard
+# Disallow: /admin/advertises
+# Disallow: /admin/comments
+# Disallow: /admin/girls
+# Disallow: /admin/hours
+# Disallow: /admin/shops

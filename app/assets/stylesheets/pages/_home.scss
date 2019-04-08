@@ -69,3 +69,187 @@ min-width: 100%;
 //     width: 100%;
 //     height: 100%;
 // }
+
+
+/* Safari 6.1-10.0 (not 10.1) */
+
+// @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+// { @media ({
+//     .safari_only {
+
+//         color:#0000FF;
+//         background-color:#CCCCCC;
+
+//     }
+// })}
+
+/* Safari 11+ */
+
+// @media not all and (min-resolution:.001dpcm)
+// { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+//     // section {
+//     //   margin-left: -15px;
+
+//     // }
+
+//     .safari_only {
+
+//         color:#FFFF00;
+//         background-color:#CCCCCC;
+
+//     }
+
+//     // .wave .wave-girl{
+//     //   background-size: 250vh 106vh;
+//     //   background-position:-80px -213px;
+//     //   min-width: 101%;
+//     //   margin-left: -73px;
+//     // }
+// }}
+
+/* Safari 10.1 */
+
+// @media not all and (min-resolution:.001dpcm)
+// { @supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
+
+//     .safari_only {
+
+//         color:#FFFF00;
+//         background-color:#CCCCCC;
+
+//     }
+// }}
+
+/* Safari 10.0 (not 10.1) */
+
+// _::-webkit-:host:not(:root:root), .safari_only {
+
+//   color:#FFFF00;
+//   background-color:#CCCCCC;
+
+// }
+
+/* Safari 10.0 (not 10.1) but not on iOS */
+
+// _::-webkit-:-webkit-full-screen:host:not(:root:root), .safari_only {
+
+//   color:#FFFF00;
+//   background-color:#CCCCCC;
+
+// }
+
+/* Safari 9+ */
+
+// _:default:not(:root:root), .safari_only {
+
+//   color:#FFFF00;
+//   background-color:#CCCCCC;
+
+// }
+
+/* Safari 9+ */
+
+// @supports (-webkit-marquee-repetition:infinite) and (object-fit:fill) {
+
+//     .safari_only {
+
+//         color:#FFFF00;
+//         background-color:#CCCCCC;
+
+//     }
+// }
+
+/* Safari 9.0-10.0 (not 10.1) */
+
+// _::-webkit-:not(:root:root), .safari_only {
+
+//   color:#FFFF00;
+//   background-color:#CCCCCC;
+
+// }
+
+/* Safari 9 */
+
+// @supports (overflow:-webkit-marquee) and (justify-content:inherit)
+// {
+
+//   .safari_only {
+//     color:#FFFF00;
+//     background-color:#CCCCCC;
+//   }
+
+// }
+
+/* Safari 9.0 (iOS Only) */
+
+// @supports (-webkit-text-size-adjust:none) and (not (-ms-ime-align:auto))
+// and (not (-moz-appearance:none))
+// {
+
+//   .safari_only {
+//     color:#FFFF00;
+//     background-color:#CCCCCC;
+//   }
+
+// }
+
+/* Safari 9+ (non-iOS) */
+
+// _:default:not(:root:root), .safari_only {
+
+//   color:#FFFF00;
+//   background-color:#CCCCCC;
+
+// }
+
+/* Safari 9.0-10.0 (not 10.1) (non-iOS) */
+
+// _:-webkit-full-screen:not(:root:root), .safari_only {
+
+//   color:#FFFF00;
+//   background-color:#CCCCCC;
+
+// }
+
+/* Safari 6.1-7.0 */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0)
+{
+   .safari_only {
+
+      // color:#FFFF00;
+      // background-color:#CCCCCC;
+
+      // background-size: 250vh 106vh !important;
+      // background-position:-80px -213px !important;
+      // min-width: 101% !important;
+      // margin-left: -73px !important;
+
+    }
+    // section {
+    //    margin-left: -15px;
+
+    // }
+
+
+
+
+    // .wave-girl {
+    //   background-size: 250vh 106vh !important;
+    //   background-position:-80px -213px !important;
+    //   min-width: 101% !important;
+    //   margin-left: -73px !important;
+    // }
+}
+
+/* Safari 6.1-10.0 (not 10.1) (non-iOS) */
+
+// @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+// { @media {
+//     _:-webkit-full-screen, .safari_only {
+
+//         color:#0000FF;
+//         background-color:#CCCCCC;
+
+//     }
+// }}
