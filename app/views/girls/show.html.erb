@@ -2,11 +2,11 @@
 <% content_for :meta_description, @girl.description %>
 <% content_for :meta_image, cl_image_path(@girl.photo_one.url) %>
 <!-- PRE LOADER -->
-<section class="preloader">
+<!-- <section class="preloader">
   <div class="spinner">
     <span class="spinner-rotate"></span>
   </div>
-</section>
+</section> -->
 <section id="home" class="slider" data-stellar-background-ratio="0.5">
   <div class="owl-carousel owl-theme">
     <div class="item " style="background-image:url(<%= cl_image_path @girl.photo_one, width: 400, :effect=>'blur_faces' %>);">
@@ -46,7 +46,7 @@
 </section>
 <div class="container">
   <div class="row pad-top">
-    <div class="wave wave-girl"></div>
+    <div class="wave wave-girl safari_only"></div>
     <div class="col-xs-12 col-md-offset-1 col-md-4 text-center space-right up-component">
       <i class="fas fa-mobile fa-5x block-icon" ></i>
       <a class="btn btn-primary" href="tel:+<%= @girl.phone %>">
@@ -54,7 +54,7 @@
       </a>
     </div>
     <div class="col-xs-12 col-md-4  text-center mobile-space-top up-component">
-      <div  target="_blank" onclick="window.open('https://www.google.com/maps/dir/Current+Location/336+New+North+Rd+Auckland', '_blank')">
+      <div  target="_blank" onclick="window.open('https://www.google.com/maps/dir/Current+Location/336+New+North+Rd+Auckland', '_blank')" >
         <i class="fas fa-map-marked-alt fa-5x block-icon"></i>
         <div class="btn btn-primary">
           <p class="addr-btn"><%= @girl.shop.address %></p>
@@ -132,15 +132,13 @@ window.location = `https://maps.google.fr/maps?saddr=${addr}&daddr=${lat},${long
         <p><%= t(".weight") if @girl.weight.present? %> <%= @girl.weight %></p>
         <p><%= t(".bust") if @girl.bust.present? %> <%= @girl.bust %></p>
         <p><%= t(".hair") if  @girl.hair.present?%> <%= @girl.hair %></p>
-
-
       </div>
       <div class="max">
         <% if @girl.photo_four.present? %>
         <div class="col-md-4 col-sm-6 ">
           <!-- MENU THUMB -->
           <div class="menu-thumb">
-            <a href='<%= cl_image_path @girl.photo_four, :effect=>'blur_faces' %>'class="image-popup" title="American Breakfast">
+            <a href='<%= cl_image_path @girl.photo_four, :effect=>'blur_faces' %>' class="image-popup" title="American Breakfast">
               <%= cl_image_tag @girl.photo_four, :effect=>"blur_faces" , class: "img-responsive", width: 500, height: 600, crop: :fill %>
               <div class="menu-info">
                 <div class="menu-item">
@@ -213,8 +211,7 @@ window.location = `https://maps.google.fr/maps?saddr=${addr}&daddr=${lat},${long
         </div>
         <% end %>
         <% if @girl.photo_eight.present? %>
-        <!-- style="margin-left: 350px;" -->
-        <div class="col-md-4 col-sm-6" >
+        <div class="col-md-4 col-sm-6 marge-picture" >
           <!-- MENU THUMB -->
           <div class="menu-thumb">
             <a href='<%=  cl_image_path @girl.photo_eight, :effect=>'blur_faces' %>' class="image-popup" title="Project title">
@@ -255,6 +252,4 @@ window.location = `https://maps.google.fr/maps?saddr=${addr}&daddr=${lat},${long
       <%= render "advertises/index" %>
     </div>
   </div>
-</div>
 </section>
-</div>

@@ -9,8 +9,8 @@
       </button>
       <!-- lOGO TEXT HERE -->
       <!-- <a href="index.html" class="navbar-brand">Eatery <span>.</span> Cafe</a> -->
-      <%= link_to "/", class: "navbar-brand" do %>
-      <%= image_tag "pinkygirls.png", class: "logo-position" %>
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <%= image_tag "pinkygirls.png", class: "logo-position" %>
       <% end %>
     </div>
     <!-- MENU LINKS -->
@@ -29,13 +29,12 @@
         <% end %>
         <li><%= link_to t('.job'), shop_job_path(@shop) %></li>
         <li><%= link_to "English" , locale: "en" %></li>
-         <li><%= link_to  "中文" , locale: "ch"%></li>
+        <li><%= link_to  "中文" , locale: "ch"%></li>
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="tel:+64<%= @shop.phone %>"><%= t(".call") %><i class="fa fa-phone"></i> 0<%= @shop.phone %></a></li>
-        <%= link_to t(".horny"), shop_get_random_girl_path(@shop), class: "section-btn" %>
-
+        <li><%= link_to t(".horny"), shop_get_random_girl_path(@shop), class: "section-btn" %></li>
       </ul>
     </div>
   </div>
