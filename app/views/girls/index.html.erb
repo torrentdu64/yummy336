@@ -5,6 +5,7 @@
     <span class="spinner-rotate"></span>
   </div>
 </section>
+<% cache @girls do %>
 <div class="container">
   <div class="row">
     <div class="parallax" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path  'henry-co-568066-unsplash' %>);">
@@ -30,3 +31,5 @@
     <% end %>
   </div>
 </div>
+
+<% end %>
