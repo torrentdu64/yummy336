@@ -39,176 +39,103 @@
         </div>
       </div>
       <div class="wave img-responsive"></div>
-      <!-- <div class="owl-carousel owl-theme">
-        <div class="item item-first">
-          <div class="caption">
-            <div class="container">
-              <div class="col-md-8 col-sm-12">
-                <h3>Eatery Cafe &amp; Restaurant</h3>
-                <h1>Our mission is to provide an unforgettable experience</h1>
-                <a href="#team" class="section-btn btn btn-default smoothScroll">Meet our chef</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item item-second">
-          <div class="caption">
-            <div class="container">
-              <div class="col-md-8 col-sm-12">
-                <h3>Your Perfect Breakfast</h3>
-                <h1>The best dinning quality can be here too!</h1>
-                <a href="#menu" class="section-btn btn btn-default smoothScroll">Discover menu</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item item-third">
-          <div class="caption">
-            <div class="container">
-              <div class="col-md-8 col-sm-12">
-                <h3>New Restaurant in Town</h3>
-                <h1>Enjoy our special menus every Sunday and Friday</h1>
-                <a href="#contact" class="section-btn btn btn-default smoothScroll">Reservation</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </div>
   </section>
 </div>
 <!-- ABOUT -->
-<div class="container">
-  <section id="about" data-stellar-background-ratio="0.5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-sm-12">
-          <div class="about-info">
-            <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
-              <h4><%= t(".paradise") %></h4>
-              <a href="tel:+64<%= @shop.phone %>"><%= t(".call") %> <i class="fa fa-phone"></i> 0<%= @shop.phone %></a>
-              <h2><%= @shop.address %></h2>
+<% cache @shop do %>
+  <div class="container">
+    <section id="about" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <div class="about-info">
+              <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+                <h4><%= t(".paradise") %></h4>
+                <a href="tel:+64<%= @shop.phone %>"><%= t(".call") %> <i class="fa fa-phone"></i> 0<%= @shop.phone %></a>
+                <h2><%= @shop.address %></h2>
+              </div>
+              <div class="wow fadeInUp" data-wow-delay="0.4s">
+                <p><%= @shop.description %></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6 col-sm-12 ">
+            <div class="wow fadeInUp " data-wow-delay="0.6s">
+              <%= image_tag "final-heart-map.png", class: "heart-map" %>
+              <div   id="map"
+                style="width: 100%;
+                height: 480px;
+                border-radius: 20px;"
+                data-markers="<%= @markers.to_json %>"
+                data-mapbox-api-key="<%= ENV['MAPBOX'] %>"
+              ></div>
+              <% image_tag "about-image.jpg", class: "img-responsive" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- MENU-->
+  <div class="container">
+    <div class="row">
+      <div class="card background card-shop" style="background-image: url(<%= asset_url 'girls.jpg' %>);">
+        <%= link_to "", shop_girls_path(@shop), class: "card-link" %>
+      </div>
+      <%= link_to "Girls", shop_girls_path(@shop), class: "btn-girls btn btn-primary" %>
+        <div class="col-xs-12 col-md-4 col-sm-8 girls">
+          <%= link_to shop_girls_path(@shop) do %>
+          <div class="footer-info footer-open-hour">
+            <div class="section-title">
+              <h2 class="wow fadeInUp" data-wow-delay="0.2s"><%= t(".girls") %></h2>
             </div>
             <div class="wow fadeInUp" data-wow-delay="0.4s">
-              <p><%= @shop.description %></p>
+              <div class="btn btn-primary">
+                <%= t(".girls-text") %>
+              </div>
             </div>
           </div>
+          <% end %>
         </div>
-        <div class="col-xs-12 col-md-6 col-sm-12 ">
-          <div class="wow fadeInUp " data-wow-delay="0.6s">
-            <%= image_tag "final-heart-map.png", class: "heart-map" %>
-            <div   id="map"
-              style="width: 100%;
-              height: 480px;
-              border-radius: 20px;"
-              data-markers="<%= @markers.to_json %>"
-              data-mapbox-api-key="<%= ENV['MAPBOX'] %>"
-            ></div>
-            <% image_tag "about-image.jpg", class: "img-responsive" %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-<!-- MENU-->
-<div class="container">
-  <div class="row">
-    <div class="card background card-shop" style="background-image: url(<%= asset_url 'girls.jpg' %>);">
-      <%= link_to "", shop_girls_path(@shop), class: "card-link" %>
-    </div>
-    <%= link_to "Girls", shop_girls_path(@shop), class: "btn-girls btn btn-primary" %>
-      <div class="col-xs-12 col-md-4 col-sm-8 girls">
-        <%= link_to shop_girls_path(@shop) do %>
-        <div class="footer-info footer-open-hour">
-          <div class="section-title">
-            <h2 class="wow fadeInUp" data-wow-delay="0.2s"><%= t(".girls") %></h2>
-          </div>
-          <div class="wow fadeInUp" data-wow-delay="0.4s">
-            <div class="btn btn-primary">
-              <%= t(".girls-text") %>
-            </div>
-          </div>
-        </div>
-        <% end %>
-      </div>
 
-  </div>
-</div>
-<!-- TEAM -->
-<div class="container">
-  <section id="team"   class="team-position">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-sm-12">
-          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-            <h2><%= t(".meet")%></h2>
-            <h4><%= t(".friendly")%></h4>
-          </div>
-        </div>
-        <div class="col-md-12 col-sm-12">
-          <div class="team-thumb wow fadeInUp wechat-tumb" data-wow-delay="0.2s">
-            <%= link_to shop_wechat_path(@shop) do %>
-            <%= image_tag "wechat-contact.png", class: "img-responsive" %>
-            <div class="team-hover">
-              <div class="team-item">
-                <h4><%= t(".team-item-wechat") %></h4>
-                <ul class="social-icon">
-                  <li><%= image_tag "pinkygirls.png"  %></li>
-                </ul>
-              </div>
-            </div>
-            <% end %>
-          </div>
-          <div class="team-info">
-            <h3><%= t(".contact-wechat") %></h3>
-            <p><%= t(".moments") %></p>
-          </div>
-        </div>
-        <!-- <div class="col-md-4 col-sm-4">
-          <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
-            <%= link_to shop_website_path(@shop) do %>
-            <%= image_tag "web-contact.png", class: "img-responsive web" %>
-            <div class="team-hover">
-              <div class="team-item">
-                <h4><%= t(".team-item-website") %></h4>
-                <ul class="social-icon">
-                  <li><%= image_tag "pinkygirls.png"  %>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <% end %>
-          </div>
-          <div class="team-info">
-            <h3><%= t(".contact-web") %></h3>
-            <p><%= t(".web-p") %></p>
-          </div>
-        </div> -->
-        <!-- <div class="col-md-4 col-sm-4">
-          <div class="team-thumb  wow fadeInUp" data-wow-delay="0.6s">
-            <%= link_to shop_instagram_path(@shop) do %>
-            <%= image_tag "insta-contact.png", class: "img-responsive" %>
-            <div class="team-hover">
-              <div class="team-item">
-                <h4><%= t(".team-item-insta") %></h4>
-                <ul class="social-icon">
-                  <li><li><%= image_tag "pinkygirls.png"  %>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <% end %>
-          </div>
-          <div class="team-info">
-            <h3><%= t(".instagam")%></h3>
-            <p><%= t(".insta-p") %></p>
-          </div>
-        </div> -->
-      </div>
     </div>
-  </section>
-</div>
+  </div>
+  <!-- TEAM -->
+  <div class="container">
+    <section id="team"   class="team-position">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+              <h2><%= t(".meet")%></h2>
+              <h4><%= t(".friendly")%></h4>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12">
+            <div class="team-thumb wow fadeInUp wechat-tumb" data-wow-delay="0.2s">
+              <%= link_to shop_wechat_path(@shop) do %>
+              <%= image_tag "wechat-contact.png", class: "img-responsive" %>
+              <div class="team-hover">
+                <div class="team-item">
+                  <h4><%= t(".team-item-wechat") %></h4>
+                  <ul class="social-icon">
+                    <li><%= image_tag "pinkygirls.png"  %></li>
+                  </ul>
+                </div>
+              </div>
+              <% end %>
+            </div>
+            <div class="team-info">
+              <h3><%= t(".contact-wechat") %></h3>
+              <p><%= t(".moments") %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+<% end %>
 <!-- CONTACT -->
 <!--  <section id="contact" data-stellar-background-ratio="0.5">
   <div class="container">
