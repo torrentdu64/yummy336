@@ -2,6 +2,42 @@
 SitemapGenerator::Sitemap.default_host = "https://www.pinkygirls.co.nz"
 
 SitemapGenerator::Sitemap.create do
+
+
+SitemapGenerator::Sitemap.create do
+  group(:sitemaps_path => 'en/', :filename => :english) do
+    add '/brothel', :changefreq => 'weekly'
+    add '/job', :changefreq => 'weekly'
+    add '/wechat', :changefreq => 'weekly'
+    add '/brothel/:auckland/escorts', :changefreq => 'weekly'
+    add '/brothel/auckland/escorts/cici', :changefreq => 'weekly'
+    add '/brothel/auckland/escorts/mia', :changefreq => 'weekly'
+    add '/brothel/auckland/escorts/Alisa', :changefreq => 'weekly'
+    add '/brothel/auckland/escorts/isabela', :changefreq => 'weekly'
+    add '/brothel/auckland/escorts/monica', :changefreq => 'weekly'
+    add '/brothel/auckland/escorts/nina', :changefreq => 'weekly'
+    add '/brothel/auckland/escorts/selina', :changefreq => 'weekly'
+    add '/brothel/auckland/escorts/amy', :changefreq => 'weekly'
+  end
+
+  group(:sitemaps_path => 'ch/', :filename => :english) do
+    add '/brothel', :changefreq => 'weekly'
+    add '/job', :changefreq => 'weekly'
+    add '/wechat', :changefreq => 'weekly'
+    add '/brothel/auckland/escorts', :changefreq => 'weekly'
+    add '/brothel/auckland/escorts/cici', :changefreq => 'weekly'
+    add '/brothel/auckland/escorts/mia', :changefreq => 'weekly'
+    add '/brothel/auckland/escorts/Alisa', :changefreq => 'weekly'
+    add '/brothel/auckland/escorts/isabela', :changefreq => 'weekly'
+    add '/brothel/auckland/escorts/monica', :changefreq => 'weekly'
+    add '/brothel/auckland/escorts/nina', :changefreq => 'weekly'
+    add '/brothel/auckland/escorts/selina', :changefreq => 'weekly'
+    add '/brothel/auckland/escorts/amy', :changefreq => 'weekly'
+  end
+end
+
+
+
   # Put links creation logic here.
   #
   # The root path '/' and sitemap index file are added automatically for you.
