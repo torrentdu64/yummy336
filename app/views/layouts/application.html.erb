@@ -119,18 +119,18 @@
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= render 'shared/footer' %>
-    <%= javascript_include_tag 'application' , async: true  %>
-    <%= javascript_pack_tag 'application', async: true  %>
+    <%= javascript_include_tag 'application' , defer: 'defer'  %>
+    <%= javascript_pack_tag 'application', defer: 'defer'  %>
     <%= javascript_include_tag 'app/jquery.js' %>
-    <%= javascript_include_tag 'app/jquery.magnific-popup.min.js', async: true  %>
-    <%= javascript_include_tag 'app/jquery.stellar.min.js', async: true  %>
-    <%= javascript_include_tag 'app/bootstrap.min.js', async: true  %>
-    <%= javascript_include_tag 'app/owl.carousel.min.js', async: true  %>
+    <%= javascript_include_tag 'app/jquery.magnific-popup.min.js', defer: 'defer'  %>
+    <%= javascript_include_tag 'app/jquery.stellar.min.js', defer: 'defer'  %>
+    <%= javascript_include_tag 'app/bootstrap.min.js', defer: 'defer'  %>
+    <%= javascript_include_tag 'app/owl.carousel.min.js', defer: 'defer'  %>
 
-    <%= javascript_include_tag 'app/smoothscroll.js', async: true  %>
-    <%= javascript_include_tag 'app/wow.min.js', async: true  %>
-    <%= javascript_include_tag 'app/custom.js', async: true  %>
-    <%= javascript_pack_tag 'map', async: true  %>
+    <%= javascript_include_tag 'app/smoothscroll.js', defer: 'defer'  %>
+    <%= javascript_include_tag 'app/wow.min.js', defer: 'defer'  %>
+    <%= javascript_include_tag 'app/custom.js', defer: 'defer'  %>
+    <%= javascript_pack_tag 'map', defer: 'defer'  %>
 
     <%= render 'shared/analytics' %>
 
