@@ -70,7 +70,7 @@
                 data-markers="<%= @markers.to_json %>"
                 data-mapbox-api-key="<%= ENV['MAPBOX'] %>"
               ></div>
-              <% image_tag "about-image.jpg", class: "img-responsive" %>
+
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@
   <!-- MENU-->
   <div class="container">
     <div class="row">
-      <div class="card background card-shop" style="background-image: url(<%= asset_url 'girls.jpg' %>);">
+      <div class="card background card-shop" style="background-image: url(<%= asset_url 'girls.png' %>);">
         <%= link_to "", shop_girls_path(@shop), class: "card-link" %>
       </div>
       <%= link_to "Girls", shop_girls_path(@shop), class: "btn-girls btn btn-primary" %>
