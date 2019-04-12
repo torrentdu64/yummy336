@@ -11,6 +11,7 @@ gem 'redis'
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
 gem "geocoder"
+gem 'heroku-deflater', :group => :production
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.4.1'

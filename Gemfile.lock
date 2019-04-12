@@ -126,6 +126,8 @@ GEM
     has_scope (0.7.2)
       actionpack (>= 4.1)
       activesupport (>= 4.1)
+    heroku-deflater (0.6.3)
+      rack (>= 1.4.5)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (1.6.0)
@@ -306,6 +308,7 @@ DEPENDENCIES
   friendly_id (~> 5.2.4)
   geocoder
   globalize (~> 5.1.0)
+  heroku-deflater
   inherited_resources!
   jbuilder (~> 2.0)
   listen (~> 3.0.5)

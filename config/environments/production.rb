@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "http://www.pinckygirls.co.nz" }
+  config.action_mailer.default_url_options = { host: "https://www.pinckygirls.co.nz" }
   # Verifies that versions and hashed value of the package contents in the project's package.json
 config.webpacker.check_yarn_integrity = false
 
@@ -9,6 +9,11 @@ config.webpacker.check_yarn_integrity = false
   config.cache_classes = true
 
   config.require_master_key = true
+
+  config.public_file_server.headers = {
+    'Cache-Control' => 'public, s-maxage=31536000, maxage=15552000',
+    'Expires' => "#{1.year.from_now.to_formatted_s(:rfc822)}"
+  }
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
