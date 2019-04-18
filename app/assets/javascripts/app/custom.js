@@ -69,10 +69,13 @@
     });
 
     $(document).on("click", ".img-responsive", function(){
+
         setInterval( next , 3000);
+
     });
 
     function next(){
+      debugger
       $(".mfp-content").slideUp("slow", function() {
         $.magnificPopup.instance.next();
       })
