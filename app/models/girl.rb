@@ -12,14 +12,20 @@ class Girl < ApplicationRecord
 
 
 
+
+
   belongs_to :shop
 
   has_many :advertises
+
+  validates :slug , presence: { message: "Put Name of lady, can't be blank !! No Space !!" }
 
   translates :name, :description, :age, :origin, :service, :size, :height, :weight, :bust, :hair
 
   extend FriendlyId
   friendly_id :slug, use: :slugged
+
+
 
 end
 
