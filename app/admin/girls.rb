@@ -9,12 +9,15 @@ ActiveAdmin.register Girl do
   f.inputs 'messages' do
      f.semantic_errors
     end
-  f.inputs 'Organization Settings' do
-     f.input :shop_id, :as => :select, :collection => Shop.all
-    end
+
+  f.input :shop_id, :input_html => { :value => 1 }, as: :hidden
   f.inputs 'Organization Settings' do
      f.input :name
-     f.input :slug
+
+      f.input  :slug, label: ' Slug => Copy and paste Lady name no space no emoji !! '
+
+
+
      f.input :description
      f.input :age
      f.input :origin
@@ -150,6 +153,7 @@ index do
     end
 
  end
+
 
 
 end
