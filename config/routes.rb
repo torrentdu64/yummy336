@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users, ActiveAdmin::Devise.config
 
-    scope '(:locale)', locale: /ch|en/ do
+    scope '(:locale)', locale: /ch|en|jp/ do
       ActiveAdmin.routes(self)
       resources :shops , only: :show, path: 'brothel' do
         get :get_random_girl
