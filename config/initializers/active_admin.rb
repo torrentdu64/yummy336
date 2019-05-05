@@ -20,6 +20,7 @@ ActiveAdmin.setup do |config|
       menu.add :label => "Languages" do |lang|
         lang.add :label => "English",:url => proc { url_for(:locale => 'en') }, id: 'i18n-en', :priority => 1
         lang.add :label => "Chinese",:url => proc { url_for(:locale => 'ch') }, id: 'i18n-ch', :priority => 2
+        lang.add :label => "japanese",:url => proc { url_for(:locale => 'jp') }, id: 'i18n-jp', :priority => 3
       end
       # admin.build_menu do |menu|
       #   menu.add :label => "My Custom Link", :url => "/", :priority => 0

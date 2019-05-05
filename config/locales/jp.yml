@@ -1,0 +1,99 @@
+jp:
+  time:
+    formats:
+      long: "%Y-%m-%d %H:%M:%S"
+
+  shared:
+    navbar:
+      home: "家"
+      about: "关于"
+      girls: "女孩"
+      contact: "联系"
+      call: "立即致电! "
+      horny: "角质恐慌"
+      job: "工作"
+
+    footer:
+      open: "营业时间 "
+      find: "找到我们"
+      reservation: "预订"
+      pinky: "粉红女孩"
+      days: "星期一〜星期天"
+      times: "下午12点〜早上6点"
+
+  shops:
+    show:
+      hours: "营业时间"
+      days: "星期一〜星期天"
+      times: "下午12点〜早上6点"
+      paradise: "来天堂"
+      girls: "女孩"
+      girls-text: "他们在等你......"
+      meet: "遇见粉红女孩"
+      friendly: "我们很友善，友好"
+      team-item-wechat: "加我们微信"
+      contact-wechat: "联系微信"
+      moments: "看时刻"
+      team-item-website: ""
+      contact-web: ""
+      web-p: ""
+      team-item-insta: ""
+      instagam: ""
+      insta-p: ""
+
+  girls:
+    index:
+      girls-title: "女孩"
+      candy: "选择你口味"
+
+    show:
+      prev: "前女孩"
+      next: "下一个女孩"
+      owl-1: "她毫不费力的魅力"
+      owl-2: "奥克兰不可抗拒的女孩炫耀着诱人的微笑"
+      owl-3: "其他女孩"
+      owl-4: "你的完美女孩"
+      owl-5: "最好的体验!"
+      owl-6: "发现快乐"
+      owl-7: "新感觉"
+      owl-8: "享受我们的一天满足你的夜晚"
+      owl-9: "更多"
+      title-show: "我们的女孩"
+      punch: "甜蜜可爱"
+      menu-1: ""
+      menu-2: ""
+      menu-3: ""
+      menu-4: ""
+      menu-5: ""
+      menu-6: ""
+      menu-7: ""
+      menu-8: ""
+      menu-9: ""
+      menu-10: ""
+      menu-11: ""
+      menu-12: ""
+      menu-13: ""
+      menu-14: ""
+      menu-15: ""
+      menu-16: ""
+      menu-17: ""
+      menu-18: ""
+      origin: "起源 :"
+      service: "服务 :"
+      size: "尺寸 : "
+      height: "身高 :"
+      weight: "重量 :"
+      bust: "胸围 :"
+      hair: "头发 :"
+
+  advertises:
+    index:
+      table-name: "Pinky Price"
+      table-hour: "小时"
+      money: "现金"
+      time-1: "30分钟"
+      time-2: "1小时"
+      time-3: "出钟"
+      cash-1: "180纽币"
+      cash-2: "260纽币"
+      cash-3: "380纽币"
