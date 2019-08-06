@@ -47,7 +47,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # end
   # Apply an incoming chained transformation: limit image to 1000x1200 and
   # add a 30-pixel watermark 5 pixels from the south east corner.
-  process :mark
+   #process :mark
   # version :watermarke do
   #   cloudinary_transformation :overlay => "pinkygirls",
   #      :width => 80, :crop => :scale,
