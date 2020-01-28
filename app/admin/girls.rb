@@ -6,12 +6,13 @@ ActiveAdmin.register Girl do
 
 
   form girl: 'girl' do  |f|
-  f.inputs 'messages' do
-     f.semantic_errors
+    f.inputs 'messages' do
+       f.semantic_errors *f.object.errors.keys
+
     end
 
-  f.input :shop_id, :input_html => { :value => 1 }, as: :hidden
-  f.inputs 'Organization Settings' do
+    f.input :shop_id, :input_html => { :value => 1 }, as: :hidden
+    f.inputs 'Organization Settings' do
      f.input :name
 
       f.input  :slug, label: ' Slug => Copy and paste Lady name no space no emoji !! '

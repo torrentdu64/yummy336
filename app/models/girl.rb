@@ -19,6 +19,8 @@ class Girl < ApplicationRecord
   has_many :advertises
 
   validates :slug , presence: { message: "Put Name of lady, can't be blank !! No Space !!" }
+  validates :photo_one, :photo_two, :photo_three , presence: true
+  validates :name , presence: true
 
   translates :name, :description, :age, :origin, :service, :size, :height, :weight, :bust, :hair
 

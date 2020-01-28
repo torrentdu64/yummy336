@@ -6,6 +6,8 @@
     <title><%= meta_title %></title>
     <meta name="description" content="<%= meta_description %>">
 
+
+
     <!-- Facebook Open Graph data -->
     <meta property="og:title" content="<%= meta_title %>" />
     <meta property="og:type" content="website" />
@@ -27,7 +29,7 @@
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-N7TRPQD');</script>
+    })(window,document,'script','dataLayer','GTM-KF4HFGW');</script>
     <!-- End Google Tag Manager -->
 
 
@@ -80,7 +82,7 @@
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7TRPQD"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KF4HFGW"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
      <script type="application/ld+json">
@@ -119,6 +121,7 @@
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= render 'shared/footer' %>
+
     <%= javascript_include_tag 'application' , async: true  %>
     <%= javascript_pack_tag 'application', async: true  %>
     <%= javascript_include_tag 'app/jquery.js' %>
@@ -132,7 +135,7 @@
     <%= javascript_include_tag 'app/custom.js', async: true  %>
     <%= javascript_pack_tag 'map', async: true  %>
 
-    <%= render 'shared/analytics' %>
+    <% render 'shared/analytics' %>
 
 
   </body>
