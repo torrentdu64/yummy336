@@ -2,6 +2,7 @@
   "name": "yummy336",
   "private": true,
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.0.5",
     "@rails/webpacker": "3.5",
     "bootstrap": "3.4.1",
     "jquery": "^3.3.1",
