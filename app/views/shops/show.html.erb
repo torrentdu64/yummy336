@@ -134,6 +134,25 @@
               <h3><%= t(".contact-wechat") %></h3>
               <p><%= t(".moments") %></p>
             </div>
+               <div class="team-thumb wow fadeInUp wechat-tumb" data-wow-delay="0.2s">
+
+              <%= link_to shop_whatapp_path(@shop) do %>
+              <%= image_tag "watsapp-contact.png", class: "img-responsive" %>
+              <div class="team-hover">
+                <div class="team-item">
+                  <h4><%= t(".team-item-whatapp") %></h4>
+                  <ul class="social-icon">
+                    <li><%= image_tag "pinkygirls.png"  %></li>
+                  </ul>
+                </div>
+              </div>
+              <% end %>
+
+            </div>
+            <div class="team-info">
+              <h3><%= t(".contact-whatapp") %></h3>
+              <p><%= t(".moments") %></p>
+            </div>
           </div>
         </div>
       </div>

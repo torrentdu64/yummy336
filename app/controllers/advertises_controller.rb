@@ -1,6 +1,6 @@
 class AdvertisesController < ApplicationController
-  before_action :set_pinky, only: [:wechat, :website, :instagram, :job]
-  skip_before_action :authenticate_user!, only: [:wechat, :website, :instagram, :job]
+  before_action :set_pinky, only: [:wechat, :website, :instagram, :job, :whatapp]
+  skip_before_action :authenticate_user!, only: [ :whatapp, :wechat, :website, :instagram, :job]
 
   def job
     @shops = Shop.where.not(latitude: nil, longitude: nil)
@@ -15,6 +15,10 @@ class AdvertisesController < ApplicationController
   end
 
   def wechat
+     @ads = Advertise.all
+  end
+
+  def whatapp
      @ads = Advertise.all
   end
 
