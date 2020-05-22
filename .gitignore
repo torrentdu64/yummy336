@@ -18,4 +18,4 @@ yarn-error.log
 config/secrets.yml.key
 
 # Ignore application configuration
-/config/application.yml
+config/application.yml
