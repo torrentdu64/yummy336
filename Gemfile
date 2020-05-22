@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.4.0'
+ruby '2.4.4'
 
 
 gem 'devise'
@@ -20,8 +20,17 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
-gem 'activeadmin', github: 'activeadmin/activeadmin'
-gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'activeadmin' #, github: 'activeadmin/activeadmin'
+#gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
+
+gem 'fog'
+#gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog-aws'
+
+
+
 
 gem 'globalize', '~> 5.1.0'
 gem 'rails-i18n', '~> 5.1'
