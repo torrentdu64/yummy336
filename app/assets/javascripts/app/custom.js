@@ -23,6 +23,7 @@
 
 
     // SLIDER
+
     $('.owl-carousel').owlCarousel({
       animateOut: 'fadeOut',
       items:1,
@@ -30,6 +31,7 @@
       autoplayHoverPause: false,
       autoplay: true,
       smartSpeed: 1000,
+
     })
 
 

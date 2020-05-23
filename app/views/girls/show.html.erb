@@ -1,6 +1,6 @@
 <% content_for :meta_title, "#{@girl.name} is on #{DEFAULT_META["meta_product_name"]}" %>
 <% content_for :meta_description, @girl.description %>
-<% content_for :meta_image, cl_image_path(@girl.photo_one.url) %>
+<% content_for :meta_image, image_url(@girl.photo_one.url) %>
 <!-- PRE LOADER -->
 <!-- <section class="preloader">
   <div class="spinner">
@@ -10,7 +10,7 @@
 <% cache @girl do %>
 <section id="home" class="slider" data-stellar-background-ratio="0.5">
   <div class="owl-carousel owl-theme">
-    <div class="item " style="background-image:url(<%= cl_image_path @girl.photo_one, width: 400 %>);">
+    <div class="item " style="background-image:url(<%= image_url @girl.photo_one.url, width: 400 %>);">
       <div class="caption">
         <div class="container">
           <div class="col-md-8 col-sm-12">
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-    <div class="item "  style="background-image:url(<%= cl_image_path @girl.photo_two ,gravity: :face  %>);">
+    <div class="item "  style="background-image:url(<%= image_url @girl.photo_two.url ,gravity: :face  %>);">
       <div class="caption">
         <div class="container">
           <div class="col-md-8 col-sm-12">
@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div class="item " style="background-image:url(<%= cl_image_path @girl.photo_three, gravity: :face %>);">
+    <div class="item " style="background-image:url(<%= image_url @girl.photo_three.url, gravity: :face %>);">
       <div class="caption">
         <div class="container">
           <div class="col-md-8 col-sm-12">
@@ -107,8 +107,8 @@
         <div class="col-md-4 col-sm-6 ">
           <!-- MENU THUMB -->
           <div class="menu-thumb">
-            <a href='<%= cl_image_path @girl.photo_four %>' class="image-popup" title="">
-              <%= cl_image_tag @girl.photo_four , class: "img-responsive", width: 500, height: 600, crop: :fill %>
+            <a href='<%= image_url @girl.photo_four.url %>' class="image-popup" title="">
+              <%= image_url @girl.photo_four.url , class: "img-responsive", width: 500, height: 600, crop: :fill %>
               <div class="menu-info">
                 <div class="menu-item">
                   <h3><%= t(".menu-1") %></h3>
@@ -126,8 +126,8 @@
         <div class="col-md-4 col-sm-6">
           <!-- MENU THUMB -->
           <div class="menu-thumb">
-            <a href='<%= cl_image_path @girl.photo_five %>' class="image-popup" title="">
-              <%= cl_image_tag @girl.photo_five, class: "img-responsive", width: 500, height: 600, crop: :fill %>
+            <a href='<%= image_url @girl.photo_five.url %>' class="image-popup" title="">
+              <%= image_url @girl.photo_five.url, class: "img-responsive", width: 500, height: 600, crop: :fill %>
               <div class="menu-info">
                 <div class="menu-item">
                   <h3><%= t(".menu-4") %></h3>
@@ -145,8 +145,8 @@
         <div class="col-md-4 col-sm-6">
           <!-- MENU THUMB -->
           <div class="menu-thumb">
-            <a href='<%= cl_image_path @girl.photo_six %>' class="image-popup" title="">
-              <%= cl_image_tag @girl.photo_six, class: "img-responsive", width: 500, height: 600, crop: :fill %>
+            <a href='<%= image_url @girl.photo_six.url %>' class="image-popup" title="">
+              <%= image_url @girl.photo_six.url, class: "img-responsive", width: 500, height: 600, crop: :fill %>
               <div class="menu-info">
                 <div class="menu-item">
                   <h3><%= t(".menu-7") %></h3>
@@ -164,8 +164,8 @@
         <div class="col-md-4 col-sm-6">
           <!-- MENU THUMB -->
           <div class="menu-thumb">
-            <a href='<%= cl_image_path @girl.photo_seven %>' class="image-popup" title="">
-              <%= cl_image_tag @girl.photo_seven, class: "img-responsive", width: 500, height: 600, crop: :fill  %>
+            <a href='<%= image_url @girl.photo_seven.url %>' class="image-popup" title="">
+              <%= image_url @girl.photo_seven.url, class: "img-responsive", width: 500, height: 600, crop: :fill  %>
               <div class="menu-info">
                 <div class="menu-item">
                   <h3><%= t(".menu-10") %></h3>
@@ -183,8 +183,8 @@
         <div class="col-md-4 col-sm-6 marge-picture" >
           <!-- MENU THUMB -->
           <div class="menu-thumb">
-            <a href='<%=  cl_image_path @girl.photo_eight %>' class="image-popup" title="">
-              <%= cl_image_tag @girl.photo_eight, class: "img-responsive", width: 500, height: 600, crop: :fill %>
+            <a href='<%=  image_url @girl.photo_eight.url %>' class="image-popup" title="">
+              <%= image_url @girl.photo_eight.url, class: "img-responsive", width: 500, height: 600, crop: :fill %>
               <div class="menu-info">
                 <div class="menu-item">
                   <h3><%= t(".menu-13") %></h3>
@@ -202,8 +202,8 @@
         <div class="col-md-4 col-sm-6 " >
           <!-- MENU THUMB -->
           <div class="menu-thumb">
-            <a href='<%= cl_image_path @girl.photo_nine %>'class="image-popup" title="">
-              <%= cl_image_tag @girl.photo_nine, class: "img-responsive", width: 500, height: 600, crop: :fill %>
+            <a href='<%= image_url @girl.photo_nine.url %>'class="image-popup" title="">
+              <%= image_url @girl.photo_nine.url, class: "img-responsive", width: 500, height: 600, crop: :fill %>
               <div class="menu-info">
                 <div class="menu-item">
                   <h3><%= t(".menu-16") %></h3>
@@ -234,6 +234,6 @@
          window.open("maps.apple.com/?daddr=336+New+North+Rd+Aucklando&dirflg=d&t=h");
 
     else
-         window.open('https://www.google.com/maps/dir/Current+Location/336+New+North+Rd+Auckland', '_blank'));
+         window.open('https://www.google.com/maps/dir/Current+Location/336+New+North+Rd+Auckland', '_blank');
   }
 </script>

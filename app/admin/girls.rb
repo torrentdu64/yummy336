@@ -4,7 +4,6 @@ ActiveAdmin.register Girl do
 #
   permit_params :shop_id,:name,:description,:age,:photo_one,:photo_two,:photo_three,:photo_four,:photo_five,:photo_six,:photo_seven,:photo_eight,:photo_nine,:photo_ten,:origin,:service,:phone,:size,:height,:weight,:bust,:hair, :slug
 
-
   form girl: 'girl' do  |f|
     f.inputs 'messages' do
        f.semantic_errors *f.object.errors.keys
@@ -90,7 +89,7 @@ index do
       column :name
       column :description
       column :photo_one do |photo|
-        image_tag(photo.photo_one_url , size: "200x300") if photo.photo_one.present?
+        image_tag(photo.photo_one.url , size: "200x300") if photo.photo_one.present?
       end
       actions
   end
