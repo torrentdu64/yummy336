@@ -218,7 +218,9 @@
         </div>
         <% end %>
       </div>
+      <% if @pricing.present? %>
       <%= render "advertises/index" , locals: {pricing: @pricing}%>
+      <% end %>
     </div>
   </div>
 </section>
