@@ -14,21 +14,21 @@
           <tbody>
             <tr>
               <td><%= t(".time-1") %></td>
-              <td><%= t(".cash-1") %></td>
+              <td>$<%= @pricing.half %></td>
             </tr>
             <tr>
               <td><%= t(".time-4") %></td>
-              <td><%= t(".cash-4") %></td>
+              <td>$<%=  @pricing.forty_five  %></td>
             </tr>
             <tr>
               <td><%= t(".time-2") %></td>
-              <td><%= t(".cash-2") %></td>
+              <td>$<%= @pricing.hour %></td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
               <td><%= t(".time-3") %></td>
-              <td><%= t(".cash-3") %></td>
+              <td>$<%= @pricing.outcall %></td>
             </tr>
           </tfoot>
         </table>

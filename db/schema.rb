@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190329013128) do
+ActiveRecord::Schema.define(version: 20200523224035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -109,6 +109,17 @@ ActiveRecord::Schema.define(version: 20190329013128) do
     t.index ["shop_id"], name: "index_hours_on_shop_id"
   end
 
+  create_table "pricing_girls", force: :cascade do |t|
+    t.string "half"
+    t.string "forty_five"
+    t.string "hour"
+    t.string "outcall"
+    t.bigint "girl_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["girl_id"], name: "index_pricing_girls_on_girl_id"
+  end
+
   create_table "shop_translations", force: :cascade do |t|
     t.integer "shop_id", null: false
     t.string "locale", null: false
@@ -152,5 +163,6 @@ ActiveRecord::Schema.define(version: 20190329013128) do
   add_foreign_key "advertises", "girls"
   add_foreign_key "girls", "shops"
   add_foreign_key "hours", "shops"
+  add_foreign_key "pricing_girls", "girls"
   add_foreign_key "shops", "users"
 end
