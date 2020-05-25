@@ -24,7 +24,7 @@ ActiveAdmin.register PricingGirl do
   #     end
   #     actions
   # end
-  #@girl = Girl.find(id: )
+  # @girl = Girl.find(id: )
 
 
 end
