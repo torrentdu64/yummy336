@@ -9,6 +9,9 @@ class GirlsController < ApplicationController
   end
 
   def show
+
+    @pricing = PricingGirl.find_by(girl_id: @girl.id)
+
     # @shops = Shop.where.not(latitude: nil, longitude: nil)
 
     # @markers = @shops.map do |shop|

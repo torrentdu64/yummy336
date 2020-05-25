@@ -8,7 +8,9 @@ Rails.application.routes.draw do
         get :get_random_girl
         resources :girls, only: [:index, :show] , path: 'escorts' do
           get :next , path: 'next'
-          get :prev , path: 'prev'
+          get :prev , path: 'prev', only: [:show]
+
+          resources :pricing_girls, only: [:show]
         end
         #resources :advertises, only: [:wechat]
         get 'job', to: 'advertises#job', :as => :job
