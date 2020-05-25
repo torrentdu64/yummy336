@@ -108,7 +108,7 @@
           <!-- MENU THUMB -->
           <div class="menu-thumb">
             <a href='<%= image_url @girl.photo_four.url %>' class="image-popup" title="">
-              <%= image_url @girl.photo_four.url , class: "img-responsive", width: 500, height: 600, crop: :fill %>
+              <%= image_tag @girl.photo_four.url , class: "img-responsive", width: 500, height: 600, crop: :fill %>
               <div class="menu-info">
                 <div class="menu-item">
                   <h3><%= t(".menu-1") %></h3>
