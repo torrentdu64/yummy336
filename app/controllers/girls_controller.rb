@@ -5,7 +5,7 @@ class GirlsController < ApplicationController
 
 
   def index
-    @girls = Girl.all
+    @girls = Girl.order(:created_at)
   end
 
   def show
