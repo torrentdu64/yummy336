@@ -14,8 +14,9 @@ class ShopsController < ApplicationController
         infoWindow: render_to_string(partial: "/shops/map_info", locals: { shop: shop })
       }
     end
-      @v = Shop.first
+      #@shop = Shop.first
       find_pinky
+
   end
 
   def get_random_girl

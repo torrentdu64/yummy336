@@ -12,9 +12,9 @@ index do
   column :description
   column :address
   column :phone
-  column :photo_one do |photo|
-    image_tag(photo.photo_one_url , size: "200x300") if photo.photo_one.present?
-  end
+  # column :photo_one do |photo|
+  #   image_tag(photo.photo_one_url , size: "200x300") if photo.photo_one.present?
+  # end
   actions
 end
 
@@ -69,9 +69,9 @@ end
       f.input :address
       f.input :phone
     end
-    f.inputs 'photo' do
-      f.input :photo_one
-    end
+    # f.inputs 'photo' do
+    #   f.input :photo_one
+    # end
     actions
   end
 

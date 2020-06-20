@@ -11,7 +11,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
   #process :set_content_type
 
   def store_dir
-    "uploads/#{model.name}/#{mounted_as}/#{model.id}"
+    "uploads/#{model.slug}/#{mounted_as}/#{model.id}"
   end
 
   version :user_thumb do
