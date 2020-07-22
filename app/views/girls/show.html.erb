@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div class="item " style="background-image:url(<%= image_url @girl.photo_three.url, gravity: :face %>);">
+    <div class="item " style="background-image:url(<%= image_url @girl.photo_three.url, gravity: :face if @girl.photo_three.present? %>);">
       <div class="caption">
         <div class="container">
           <div class="col-md-8 col-sm-12">
