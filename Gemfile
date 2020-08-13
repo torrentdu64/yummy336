@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
-ruby '2.4.4'
+ruby '2.7.1'
 
 
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
 gem 'puma'
-gem 'rails', '5.1.6'
+gem 'rails', '~> 6.0', '>= 6.0.3.2'
 gem 'redis'
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
@@ -25,15 +25,15 @@ gem 'activeadmin' #, github: 'activeadmin/activeadmin'
 
 
 gem 'fog'
-#gem 'carrierwave'
+# #gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
 
 
 
 
-gem 'globalize', '~> 5.1.0'
-gem 'rails-i18n', '~> 5.1'
+gem 'globalize', '~> 5.3.0'
+gem 'rails-i18n', '~> 6.0.0'
 gem 'friendly_id', '~> 5.2.4'
 gem 'sitemap_generator'
 gem "figaro"
