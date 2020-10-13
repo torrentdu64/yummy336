@@ -31,7 +31,7 @@ module Yummy336
 
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
-
+    config.assets.initialize_on_precompile = false
     config.assets.compile = false
 
     config.middleware.use ActionDispatch::Cookies
