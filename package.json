@@ -4,8 +4,12 @@
   "dependencies": {
     "@rails/webpacker": "3.5",
     "bootstrap": "3.4.1",
+    "dot-prop": "^6.0.0",
+    "http-proxy": "^1.18.1",
     "jquery": "^3.3.1",
+    "js-yaml": "^3.14.0",
     "mapbox-gl": "^0.53.0",
+    "node-forge": "^0.10.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
