@@ -50,10 +50,10 @@ ActiveRecord::Schema.define(version: 2020_05_23_224035) do
   end
 
   create_table "girl_translations", force: :cascade do |t|
-    t.integer "girl_id", null: false
+    t.bigint "girl_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.text "description"
     t.string "age"
@@ -121,10 +121,10 @@ ActiveRecord::Schema.define(version: 2020_05_23_224035) do
   end
 
   create_table "shop_translations", force: :cascade do |t|
-    t.integer "shop_id", null: false
+    t.bigint "shop_id", null: false
     t.string "locale", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "title"
     t.text "description"
     t.index ["locale"], name: "index_shop_translations_on_locale"
