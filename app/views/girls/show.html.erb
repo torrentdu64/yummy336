@@ -10,7 +10,7 @@
 <% cache @girl do %>
 <section id="home" class="slider" data-stellar-background-ratio="0.5">
   <div class="owl-carousel owl-theme">
-    <div class="item " style="background-image:url(<%= image_url @girl.photo_one.url, width: 400 %>);">
+    <div class="item " style="background-image:url(<%= image_url @girl.photo_one.url, width: 400  if @girl.photo_one.present? %>);">
       <div class="caption">
         <div class="container">
           <div class="col-md-8 col-sm-12">
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-    <div class="item "  style="background-image:url(<%= image_url @girl.photo_two.url ,gravity: :face  %>);">
+    <div class="item "  style="background-image:url(<%= image_url @girl.photo_two.url ,gravity: :face if @girl.photo_two.present? %>);">
       <div class="caption">
         <div class="container">
           <div class="col-md-8 col-sm-12">
