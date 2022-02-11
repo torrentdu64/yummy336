@@ -17,7 +17,7 @@ class Girl < ApplicationRecord
   belongs_to :shop
 
   has_many :advertises
-  #has_many :pricing_girls
+  has_many :pricing_girls
 
 
   validates :slug , presence: { message: "Put Name of lady, can't be blank !! No Space !!" }
